@@ -6,6 +6,7 @@ h2.im-joseph figure {
 }
 
 .profile-image {
+    max-width: 240px;
     padding-top: 40px;
 }
 
