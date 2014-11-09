@@ -5,6 +5,10 @@ h2.im-joseph figure {
     z-index: 990;
 }
 
+.profile-image {
+    padding-top: 40px;
+}
+
 p.header-desc {
     text-align: center;
     color: #45b29a;
@@ -15,6 +19,6 @@ p.header-desc {
 }
 
 #top {
-    background: #E0EbE8
+    background: #E0EbE8;
 }
 
