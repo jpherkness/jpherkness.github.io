@@ -1,8 +1,6 @@
 h2.im-joseph figure {
-    max-width: 240px;
+    max-width: 260px;
     margin: 0 auto;
-    position: relative;
-    z-index: 990;
 }
 
 .profile-image {
