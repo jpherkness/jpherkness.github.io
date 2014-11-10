@@ -15,12 +15,18 @@ p.header-desc {
     font-weight: 400;
 }
 
+h1.what-i-know-header {
+    text-align: center;
+    color: #ffffff;
+    padding: 1em 0;
+}
+
 #top {
     background: #E0EbE8;
 }
 
 #what-i-know{
-    background: #fff;
+    background: #45b29a;
 }
 
 body {
@@ -28,6 +34,8 @@ body {
 }
 
 #laptop {
+    max-width: 500px;
+    margin: 0 auto;
     padding-top: 20px;   
 }
 
