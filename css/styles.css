@@ -5,7 +5,6 @@ h2.im-joseph figure {
 
 .profile-image {
     max-width: 240px;
-    padding-top: 40px;
 }
 
 p.header-desc {
@@ -20,3 +19,18 @@ p.header-desc {
     background: #E0EbE8;
 }
 
+#what-i-know{
+    background: #fff;
+}
+
+body {
+    background: #E0EbE8;
+}
+
+#laptop {
+    padding-top: 20px;   
+}
+
+.container {
+    padding: 20px   
+}
