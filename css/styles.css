@@ -6,34 +6,24 @@
     margin-bottom: 30px;
 }
 
-.profile-image {
-    max-width: 200px;
-}
-
-p.header-desc {
-    text-align: center;
-    color: #45b29a;
-    padding: 1em 0;
-    font-size: 120%;
-    font-weight: 400;
-}
-
-h1.what-i-know-header {
-    text-align: center;
-    color: #ffffff;
-    padding: 1em 0;
-}
-
 #top {
-    background: #2c3e50;
-    padding-top: 100px;
-}
-
-#what-i-know{
-    background: #ffffff;
-    padding-bottom: 100px;
+    background: #525d62;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 body {
-    background: #2c3e50;
+    background: #ffffff;
 }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
