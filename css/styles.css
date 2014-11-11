@@ -1,10 +1,10 @@
 h2.im-joseph figure {
-    max-width: 260px;
+    max-width: 240px;
     margin: 0 auto;
 }
 
 .profile-image {
-    max-width: 240px;
+    max-width: 200px;
 }
 
 p.header-desc {
@@ -22,11 +22,12 @@ h1.what-i-know-header {
 }
 
 #top {
-    background: #E0EbE8;
+    background: #2c3e50;
 }
 
 #what-i-know{
-    background: #45b29a;
+    background: #45b29d;
+    padding-bottom: 100px;
 }
 
 body {
