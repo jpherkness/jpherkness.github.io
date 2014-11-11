@@ -1,5 +1,5 @@
 h2.im-joseph figure {
-    max-width: 240px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -23,17 +23,14 @@ h1.what-i-know-header {
 
 #top {
     background: #2c3e50;
+    padding-top: 100px;
 }
 
 #what-i-know{
-    background: #45b29d;
+    background: #ffffff;
     padding-bottom: 100px;
 }
 
 body {
-    background: #E0EbE8;
-}
-
-.container {
-    padding-top: 20px;
+    background: #2c3e50;
 }
