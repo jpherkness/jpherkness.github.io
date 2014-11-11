@@ -33,10 +33,10 @@ body {
     background: #E0EbE8;
 }
 
-#laptop {
-    padding-top: 20px;   
+.container {
+    padding-top: 20px;
 }
 
-.container {
-    padding: 20px   
+#mountains {
+    max-width: 500px;   
 }
