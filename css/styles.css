@@ -1,9 +1,8 @@
 #name-header {
-    max-width: 300px;
+    max-width: 240px;
     margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #top {
