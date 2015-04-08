@@ -1,4 +1,4 @@
-$blue-color : #4070f8;
+$blue-color : #5183fb;
 $pink-color : #EE3A6D;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
@@ -22,17 +22,17 @@ body {
     vertical-align: middle;
 }
 
+.intro .intro-body .name-image {
+	width: 100%;
+	height: auto;
+}
+
 .intro .intro-body .intro-text {
     font-size: 38px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.30);
 	width: 300;
-}
-
-.name-image {
-	width: 70%;
-	height: auto;
 }
 
 .about {
