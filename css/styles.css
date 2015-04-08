@@ -31,6 +31,10 @@ body {
   color: rgba(255, 255, 255, 0.3);
   width: 300; }
 
+.skills-image {
+  width: 70%;
+  height: auto; }
+
 .about {
   display: table;
   width: 100%;
