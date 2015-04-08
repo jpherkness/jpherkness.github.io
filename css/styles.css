@@ -1,28 +1,6 @@
-#name-header {
-    max-width: 240px;
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#top {
-    background: #f96d6d;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 body {
-    background: #ffffff;
+    background: #f8f8f8;
 }
-
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
+.top {
+    background-color: #234235;
+}
