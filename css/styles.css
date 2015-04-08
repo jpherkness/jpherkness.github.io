@@ -1,23 +1,35 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400Normal);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400);
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
 
+.navbar-icon {
+	height: 100%;
+	width: auto;
+}
 .intro .intro-body .first-name-heading {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 70px;
-	color: #26C2A2;
+	font-family:'Dosis', sans-serif;
+	font-weight: 200;
+	font-size: 140px;
+	color: #fff;
+	width: 300;
+}
+
+.intro .intro-body .last-name-heading {
+	font-family:'Dosis', sans-serif;
+	font-weight: 200;
+	font-size: 140px;
+	color: #fff;
 	width: 300;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 28px;
-	font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+	font-family: 'Dosis', sans-serif;
 	font-weight: 300;
-	color: rgba(0, 0, 0, 0.23);
+	color: rgba(255, 255, 255, 0.50);
 	width: 300;
 }
 
@@ -26,6 +38,7 @@ body {
     width: 100%;
     height: 100vh;
     text-align: center;
+	background: #4070f8;
 }
 
 .intro .intro-body {
@@ -34,16 +47,20 @@ body {
 }
 
 .logo-image {
-	width: 400;
-	height: 400;
+	width: 30%;
+	height: auto;
 }
 
+.divider-image {
+	width: 80%;
+	height: auto;
+}
 .about {
 	display: table;
     width: 100%;
     height: 50vh;
     text-align: center;
-	background-color: #26C2A2;
+	background-color: #fff;
 }
 
 .about .about-body {
@@ -55,14 +72,14 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 40px;
-	color: #fff;
+	color: rgba(0, 0, 0, 0.23);
 }
 
 .about p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 40px;
-	color: #fff;
+	color: rgba(0, 0, 0, 0.23);
 	width: 300;
 }
 
@@ -82,7 +99,8 @@ body {
 }
 
 .logo-image {
-	height: inherit;
+	height: 150px;
+	width: 150px;
 	margin: 0;
 	padding: 0;
 }
