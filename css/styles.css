@@ -1,6 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400Normal);
 body {
-    background: #f8f8f8;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 }
-.top {
-    background-color: #234235;
+
+.intro .intro-body .first-name-heading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 70px;
+	color: #26C2A2;
+	width: 300;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 28px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.23);
+	width: 300;
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo-image {
+	width: 400;
+	height: 400;
+}
+
+.about {
+	display: table;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+	background-color: #26C2A2;
+}
+
+.about .about-body {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.about h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: #fff;
+}
+
+.about p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: #fff;
+	width: 300;
+}
+
+.about p a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: #fff;
+}
+
+
+
+
+.label {
+	font-style: italic;
+	font-weight: 300; /* You specify the number you see next to the fonts to change from light to bold ie you would put 700 etc. etc. */
+}
+
+.logo-image {
+	height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.header-icon {
+	height: inherit;
 }
