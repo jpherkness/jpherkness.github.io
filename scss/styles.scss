@@ -1,0 +1,103 @@
+$blue-color : #4070f8;
+$pink-color : #EE3A6D;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+	background: $blue-color;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 38px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.30);
+	width: 300;
+}
+
+.name-image {
+	width: 70%;
+	height: auto;
+}
+
+.about {
+	display: table;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+	background-color: #fff;
+}
+
+.about .about-body {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.about h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: rgba(0, 0, 0, 0.23);
+}
+
+.about p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: rgba(0, 0, 0, 0.23);
+	width: 300;
+}
+
+.about p a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 40px;
+	color: #fff;
+}
+
+
+
+
+.label {
+	font-style: italic;
+	font-weight: 300; /* You specify the number you see next to the fonts to change from light to bold ie you would put 700 etc. etc. */
+}
+
+.logo-image {
+	height: 150px;
+	width: 150px;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.header-icon {
+	height: inherit;
+}
