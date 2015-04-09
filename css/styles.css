@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 .row-no-padding [class*="col-"] {
   padding-left: 0 !important;
   padding-right: 0 !important; }
@@ -31,16 +32,41 @@ body {
   color: rgba(255, 255, 255, 0.3);
   width: 300; }
 
-.skills-image {
+.skills {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #fff; }
+
+.skills .skills-body {
+  display: table-cell;
+  vertical-align: middle; }
+
+.skills .skills-body .skills-image {
   width: 70%;
   height: auto; }
+
+.skills .skills-body h1 {
+  font-size: 38px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: #5183fb;
+  width: 300; }
+
+.skills .skills-body p {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #dddddd;
+  width: 300; }
 
 .about {
   display: table;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   text-align: center;
-  background-color: #fff; }
+  background-color: #EE3A6D; }
 
 .about .about-body {
   display: table-cell;
