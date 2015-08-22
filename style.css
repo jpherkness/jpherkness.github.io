@@ -28,9 +28,21 @@ img {
 .header{
 	height:100vh;
 }
+.header-image{
+	height:80vh;
+}
 .about{
 	height:100vh;
 	background-color: rgb(255, 255, 255);
-	
-	
+}
+
+.button{
+	height:70px;
+	width:250px;
+	background-color: #00CE96;
+  	-moz-border-radius: 35px;
+  	-webkit-border-radius: 35px;
+  	border: 5px solid #00CE96;
+  	padding: 5px;
+	text-align: center;
 }
