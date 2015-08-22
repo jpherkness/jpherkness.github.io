@@ -1,0 +1,27 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face{
+	font-family: 'Proxima Nova';
+	src: url(fonts/ProximaNova-Bold.otf) format('opentype');
+}
+
+	
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+p .name{
+	font-family: 'Proxima Nova', sans-serif;
+	height: 1vh;
+	font-size: 60px;
+	text-align: center;
+	color: #039BFD;
+}
