@@ -26,8 +26,6 @@ img {
 	color: #039BFD;
 }
 .header{
-	background: url(assets/header.svg) no-repeat left center;
-	background-size:cover;
 	height:100vh;
 }
 .about{
