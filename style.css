@@ -26,12 +26,19 @@ img {
 	color: #039BFD;
 }
 .header{
-	height:100vh;
+	height:70vh;
+	padding: 20px;
 }
 .header-image{
+	max-height: 400px;
+	min-height: 70vh;
 	display: block;
     margin-left: auto;
     margin-right: auto 
+}
+
+.buttons{
+	min-height:30vh;
 }
 .about{
 	height:100vh;
