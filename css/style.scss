@@ -1,12 +1,12 @@
-$blueColor: #00ABFF;
+$blueColor: #00ADFE;
 $purpleColor: #9134EE;
 $greenColor: #00CE96;
 $redColor: #ee1356;
 $greyColor: #F9F9F9;
-$darkGreyColor: #bfbfbf;
+$darkGreyColor: #626262;
 $yellowColor: #F5D76E;
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 @font-face{
 	src: url(fonts/ProximaNova-Bold.otf) format('opentype');
 }
@@ -17,22 +17,18 @@ html {
 }
 
 body {
-	font-family: 'Proxima Nova', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 30px;
 	line-height: 1.42857143;
 }
 
-.text{
-	fill: $greenColor;
-}
 .header{
-	height:70vh;
 	padding-top: 80px;
 }
 .header-image{
 	width:100%;
 	max-height: 400px;
-	min-height: 70vh;
 	display: block;
     margin-left: auto;
     margin-right: auto 
@@ -49,8 +45,13 @@ body {
 }
 
 .oakland-link{
-	color: $yellowColor;
+	color: $blueColor;
 	text-decoration: none;
+}
+
+.buttons{
+	padding-right: 2em;
+	padding-left: 2em;
 }
 
 .button-container {
@@ -61,7 +62,8 @@ body {
 }
 
 .btn {
-	font-family: 'Proxima Nova';
+	font-family: 'Open Sans';
+	font-weight: 400;
 	width:100%;
   	-webkit-border-radius: 100;
   	-moz-border-radius: 100;
@@ -88,13 +90,16 @@ body {
 }
 
 .footer{
-	font-family: 'Proxima Nova';
-	font-size: 20px;
-	text-transform: uppercase;
+	
+	color: $darkGreyColor;
+	font-size: 30px;
 	text-align: center;
 }
+.name{
+	color:$blueColor;
+}
 .fa-heart{
-	color: $redColor;
+	color: $blueColor;
 }
 
 html, button, input, select, textarea,
