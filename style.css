@@ -36,13 +36,27 @@ img {
 	background-color: rgb(255, 255, 255);
 }
 
-.button{
-	height:70px;
-	width:250px;
-	background-color: #00CE96;
-  	-moz-border-radius: 35px;
-  	-webkit-border-radius: 35px;
-  	border: 5px solid #00CE96;
-  	padding: 5px;
-	text-align: center;
+.btn {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
+	margin-left: 1em;
+  	-webkit-border-radius: 60;
+  	-moz-border-radius: 60;
+  	border-radius: 60px;
+  	font-family: Arial;
+  	color: #00ABFF;
+  	font-size: 20px;
+  	background-color: transparent;
+  	padding: 20px 40px 20px 40px;
+  	border: solid #00ABFF 2px;
+  	text-decoration: none;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+   	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  	background-color: #00ABFF;
+  	text-decoration: none;
+	color:white;
 }
