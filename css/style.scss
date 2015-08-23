@@ -8,9 +8,13 @@ $yellowColor: #F5D76E;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 @font-face{
+	font-family: 'Proxima Nova';
 	src: url(fonts/ProximaNova-Bold.otf) format('opentype');
 }
-
+@font-face{
+	font-family: 'Frankfurter';
+	src: url(fonts/Frankfurter-Plain.ttf) format('truetype ');
+}
 	
 html {
 	overflow-x: hidden;
@@ -112,9 +116,10 @@ body {
 	font-size: 30px;
 	text-align: center;
 }
-.name{
+.footer .name{
 	color:$blueColor;
 }
+
 .fa-heart{
 	color: $blueColor;
 }
@@ -123,4 +128,14 @@ html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
     font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 600px) {
+	.header{
+		padding: 0em 1em;
+	}
+  	.header-image {
+	  	content:url("../assets/header-narrow.svg");
+	  	width:100%;
+  	}
 }
