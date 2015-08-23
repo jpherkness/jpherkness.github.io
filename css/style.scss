@@ -23,8 +23,10 @@ body {
 	line-height: 1.42857143;
 }
 
+//Header section
 .header{
 	padding-top: 80px;
+	padding-bottom: 0px;
 }
 .header-image{
 	width:100%;
@@ -34,31 +36,13 @@ body {
     margin-right: auto 
 }
 
-.about{
-	text-align: center;
-	color: $darkGreyColor;
-	background-color: $greyColor;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-}
-
-.oakland-link{
-	color: $blueColor;
-	text-decoration: none;
-}
-
+// Buttons section
 .buttons{
-	padding-right: 1em;
-	padding-left: 1em;
+	padding: 0em 1em;
 }
 
 .button-container {
-    padding-top: 0em;
-	padding-right: 1em;
-	padding-left: 1em;
-	padding-bottom: 1em;
+    padding: 0.5em;
 }
 
 .btn {
@@ -89,6 +73,39 @@ body {
 	outline: none;
 }
 
+// About section
+.about{
+	text-align: center;
+	color: $darkGreyColor;
+	background-color: $greyColor;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.oakland-link{
+	color: $blueColor;
+	text-decoration: none;
+}
+
+//Skills section
+.skills{
+	text-align: center;
+	color: $darkGreyColor;
+	background-color: white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.skill{
+	text-align:left;
+	color: $blueColor;
+}
+
+// Footer section
 .footer{
 	
 	color: $darkGreyColor;

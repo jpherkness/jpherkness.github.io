@@ -11,7 +11,8 @@ body {
   line-height: 1.42857143; }
 
 .header {
-  padding-top: 80px; }
+  padding-top: 80px;
+  padding-bottom: 0px; }
 
 .header-image {
   width: 100%;
@@ -20,28 +21,11 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.about {
-  text-align: center;
-  color: #626262;
-  background-color: #F9F9F9;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-right: 40px;
-  padding-left: 40px; }
-
-.oakland-link {
-  color: #00ADFE;
-  text-decoration: none; }
-
 .buttons {
-  padding-right: 1em;
-  padding-left: 1em; }
+  padding: 0em 1em; }
 
 .button-container {
-  padding-top: 0em;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-bottom: 1em; }
+  padding: 0.5em; }
 
 .btn {
   font-family: 'Open Sans';
@@ -67,6 +51,32 @@ body {
 
 .btn:focus {
   outline: none; }
+
+.about {
+  text-align: center;
+  color: #626262;
+  background-color: #F9F9F9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px; }
+
+.oakland-link {
+  color: #00ADFE;
+  text-decoration: none; }
+
+.skills {
+  text-align: center;
+  color: #626262;
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px; }
+
+.skill {
+  text-align: left;
+  color: #00ADFE; }
 
 .footer {
   color: #626262;
