@@ -33,6 +33,10 @@ body {
   color: #00ADFE;
   text-decoration: none; }
 
+.buttons {
+  padding-right: 1em;
+  padding-left: 1em; }
+
 .button-container {
   padding-top: 0em;
   padding-right: 1em;
