@@ -29,18 +29,25 @@ img {
 	height:100vh;
 }
 .header-image{
-	height:80vh;
+	max-width: 900px;
+	min-width: 600px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 .about{
 	height:100vh;
 	background-color: rgb(255, 255, 255);
 }
 
+.button-container {
+    padding-top: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
 .btn {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	margin-right: 1em;
-	margin-left: 1em;
+	width:100%;
   	-webkit-border-radius: 60;
   	-moz-border-radius: 60;
   	border-radius: 60px;
