@@ -33,10 +33,6 @@ body {
   color: #00ADFE;
   text-decoration: none; }
 
-.buttons {
-  padding-right: 2em;
-  padding-left: 2em; }
-
 .button-container {
   padding-top: 0em;
   padding-right: 1em;
@@ -83,3 +79,5 @@ html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
+
+/*# sourceMappingURL=style.css.map */
