@@ -29,6 +29,7 @@ img {
 	height:100vh;
 }
 .header-image{
+	width:10px;
 	display: block;
     margin-left: auto;
     margin-right: auto 
