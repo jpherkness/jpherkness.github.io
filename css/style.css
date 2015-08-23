@@ -100,7 +100,7 @@ html, button, input, select, textarea,
 
 @media (max-width: 600px) {
   .header {
-    padding: 0em 1em; }
+    padding: 1em 0em 0.5em 0.5em; }
 
   .header-image {
     content: url("../assets/header-narrow.svg");
