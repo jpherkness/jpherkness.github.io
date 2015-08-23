@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@font-face {
+  src: url(fonts/ProximaNova-Bold.otf) format("opentype"); }
+html {
+  overflow-x: hidden; }
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 30px;
+  line-height: 1.42857143; }
+
+.text {
+  fill: #00CE96; }
+
+.header {
+  height: 70vh;
+  padding-top: 80px; }
+
+.header-image {
+  width: 100%;
+  max-height: 400px;
+  min-height: 70vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.about {
+  text-align: center;
+  color: #bfbfbf;
+  background-color: #F9F9F9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px; }
+
+.oakland-link {
+  color: #F5D76E;
+  text-decoration: none; }
+
+.button-container {
+  padding-top: 0em;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em; }
+
+.btn {
+  font-family: 'Proxima Nova';
+  width: 100%;
+  -webkit-border-radius: 100;
+  -moz-border-radius: 100;
+  border-radius: 100px;
+  color: #00ABFF;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 15px 20px 15px 20px;
+  border: solid #00ABFF 2px;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s; }
+
+.btn:hover {
+  background-color: #00ABFF;
+  text-decoration: none;
+  color: white; }
+
+.btn:focus {
+  outline: none; }
+
+.footer {
+  font-family: 'Proxima Nova';
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center; }
+
+.fa-heart {
+  color: #ee1356; }
+
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
