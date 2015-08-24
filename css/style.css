@@ -80,7 +80,8 @@ body {
 
 .skill {
   text-align: left;
-  color: #00ADFE; }
+  color: #00ADFE;
+  font-size: 24px; }
 
 .footer {
   color: #626262;
