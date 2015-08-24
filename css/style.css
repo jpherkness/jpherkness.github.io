@@ -12,9 +12,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 30px;
-  line-height: 1.42857143; }
+  line-height: 1.42857143;
+  text-align: center; }
 
 .header {
+  background-color: white;
   padding-top: 80px;
   padding-bottom: 0px; }
 
@@ -57,7 +59,6 @@ body {
   outline: none; }
 
 .about {
-  text-align: center;
   color: #626262;
   background-color: #F9F9F9;
   padding-top: 100px;
@@ -65,12 +66,11 @@ body {
   padding-right: 40px;
   padding-left: 40px; }
 
-.oakland-link {
+.about .highlighted {
   color: #00ADFE;
   text-decoration: none; }
 
 .skills {
-  text-align: center;
   color: #626262;
   background-color: white;
   padding-top: 100px;
@@ -78,21 +78,28 @@ body {
   padding-right: 40px;
   padding-left: 40px; }
 
-.skill {
+.skills .highlighted {
   text-align: left;
-  color: #00ADFE;
+  color: #00CE96;
   font-size: 24px; }
 
-.footer {
+.interests {
   color: #626262;
-  font-size: 30px;
-  text-align: center; }
+  background-color: #F9F9F9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px; }
 
-.footer .name {
-  color: #00ADFE; }
+.interests .highlighted {
+  color: #9134EE; }
 
-.fa-heart {
-  color: #00ADFE; }
+.footer {
+  background-color: white;
+  color: #626262; }
+
+.footer .highlighted {
+  color: #FF4568; }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
@@ -104,5 +111,5 @@ html, button, input, select, textarea,
     padding: 0.5em 0.5em 0em 0em; }
 
   .header-image {
-    content: url("../assets/header-narrow1.svg");
+    content: url("../assets/header-narrow1-test.svg");
     width: 100%; } }

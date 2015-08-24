@@ -1,10 +1,14 @@
 $blueColor: #00ADFE;
 $purpleColor: #9134EE;
 $greenColor: #00CE96;
-$redColor: #ee1356;
+$redColor: #FF4568;
 $greyColor: #F9F9F9;
 $darkGreyColor: #626262;
+$darkDarkGreyColor: #2A2A2C;
 $yellowColor: #F5D76E;
+
+$normalFontSize: 30px;
+$smallFontSize: 24px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 @font-face{
@@ -23,12 +27,14 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 30px;
+	font-size: $normalFontSize;
 	line-height: 1.42857143;
+	text-align: center;
 }
 
 //Header section
 .header{
+	background-color: white;
 	padding-top: 80px;
 	padding-bottom: 0px;
 }
@@ -79,7 +85,6 @@ body {
 
 // About section
 .about{
-	text-align: center;
 	color: $darkGreyColor;
 	background-color: $greyColor;
 	padding-top: 100px;
@@ -88,14 +93,13 @@ body {
 	padding-left: 40px;
 }
 
-.oakland-link{
+.about .highlighted{
 	color: $blueColor;
 	text-decoration: none;
 }
 
 //Skills section
 .skills{
-	text-align: center;
 	color: $darkGreyColor;
 	background-color: white;
 	padding-top: 100px;
@@ -104,25 +108,33 @@ body {
 	padding-left: 40px;
 }
 
-.skill{
-	text-align:left;
-	color: $blueColor;
-	font-size: 24px;
+.skills .highlighted{
+	text-align: left;
+	color: $greenColor;
+	font-size: $smallFontSize;
+}
+// Interests section
+.interests{
+	color: $darkGreyColor;
+	background-color: $greyColor;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.interests .highlighted{
+	color: $purpleColor;
 }
 
 // Footer section
 .footer{
-	
+	background-color: white;
 	color: $darkGreyColor;
-	font-size: 30px;
-	text-align: center;
-}
-.footer .name{
-	color:$blueColor;
 }
 
-.fa-heart{
-	color: $blueColor;
+.footer .highlighted{
+	color: $redColor;
 }
 
 html, button, input, select, textarea,
@@ -136,7 +148,7 @@ html, button, input, select, textarea,
 		padding: 0.5em 0.5em 0em 0em;
 	}
   	.header-image {
-	  	content:url("../assets/header-narrow1.svg");
+	  	content:url("../assets/header-narrow1-test.svg");
 	  	width:100%;
   	}
 }
