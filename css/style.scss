@@ -31,7 +31,6 @@ body {
 	line-height: 1.42857143;
 	text-align: center;
 }
-
 //Header section
 .header{
 	background-color: white;
@@ -44,6 +43,28 @@ body {
 	display: block;
     margin-left: auto;
     margin-right: auto 
+}
+
+.profile-image{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+
+//Test Header section
+.test-header{
+	background-color: white;
+	color: $darkGreyColor;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.test-header .highlighted{
+	color: $redColor;
 }
 
 // Buttons section
