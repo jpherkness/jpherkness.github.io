@@ -157,7 +157,4 @@ html, button, input, select, textarea,
     padding: 0em 0em; }
 
   .text {
-    width: 0px;
-    height: 0px; } }
-
-/*# sourceMappingURL=style.css.map */
+    display: none; } }
