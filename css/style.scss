@@ -53,6 +53,7 @@ body {
 // Buttons section
 .buttons{
 	padding: 0em 1em;
+	background-color: $white;
 }
 
 .button-container {
@@ -66,11 +67,11 @@ body {
   	-webkit-border-radius: 100;
   	-moz-border-radius: 100;
   	border-radius: 100px;
-  	color: $grey;
+  	color: white;
   	font-size: 20px;
-  	background-color: transparent;
+  	background-color: black;
   	padding: 15px 30px 15px 30px;
-  	border: solid $grey 2px;
+  	border: solid black 2px;
   	text-decoration: none;
 	text-transform: capitalize;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
@@ -78,7 +79,7 @@ body {
 	
 	
 	&:hover {
-		background-color: $grey;
+		background-color: black;
 		text-decoration: none;
 		color:white;
 	}
@@ -91,24 +92,30 @@ body {
 .btn.resume{
 	background-color: $green;
 	color: $white;
+	border-color: $green;
 	&:hover{
 		background-color:darken($green, 5%);
+		border-color: darken($green, 5%);
 	}
 }
 
 .btn.linkedin{
 	background-color: $blue;
 	color: $white;
+	border-color: $blue;
 	&:hover{
 		background-color:darken($blue, 5%);
+		border-color: darken($blue, 5%);
 	}
 }
 
 .btn.github{
-	background-color: $purple;
+	background-color: $yellow;
 	color: $white;
+	border-color: $yellow;
 	&:hover{
-		background-color:darken($purple, 5%);
+		background-color:darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
 	}
 }
 
@@ -180,8 +187,9 @@ body {
 
 // Footer section
 .footer{
-	background-color: black;
+	background-color: #000000;
 	color: $white;
+	font-size: $smallFontSize;
 }
 
 .footer .highlighted{
@@ -197,7 +205,7 @@ html, button, input, select, textarea,
 
 @media (max-width: 600px) {
 	.buttons{
-		padding: 0em 2em;
+		padding: 0em 1em;
 	}
 	
 	.header{

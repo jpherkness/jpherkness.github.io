@@ -32,7 +32,8 @@ body {
   -moz-border-radius: 150px; }
 
 .buttons {
-  padding: 0em 1em; }
+  padding: 0em 1em;
+  background-color: #ffffff; }
 
 .button-container {
   padding: 0.5em; }
@@ -44,17 +45,17 @@ body {
   -webkit-border-radius: 100;
   -moz-border-radius: 100;
   border-radius: 100px;
-  color: #F9F9F9;
+  color: white;
   font-size: 20px;
-  background-color: transparent;
+  background-color: black;
   padding: 15px 30px 15px 30px;
-  border: solid #F9F9F9 2px;
+  border: solid black 2px;
   text-decoration: none;
   text-transform: capitalize;
   -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s; }
   .btn:hover {
-    background-color: #F9F9F9;
+    background-color: black;
     text-decoration: none;
     color: white; }
   .btn:focus {
@@ -62,21 +63,27 @@ body {
 
 .btn.resume {
   background-color: #00CE96;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #00CE96; }
   .btn.resume:hover {
-    background-color: #00b583; }
+    background-color: #00b583;
+    border-color: #00b583; }
 
 .btn.linkedin {
   background-color: #00ADFE;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #00ADFE; }
   .btn.linkedin:hover {
-    background-color: #009ce5; }
+    background-color: #009ce5;
+    border-color: #009ce5; }
 
 .btn.github {
-  background-color: #9134EE;
-  color: #ffffff; }
+  background-color: #FFC100;
+  color: #ffffff;
+  border-color: #FFC100; }
   .btn.github:hover {
-    background-color: #841cec; }
+    background-color: #e6ae00;
+    border-color: #e6ae00; }
 
 .about {
   color: #626262;
@@ -129,8 +136,9 @@ body {
   height: 70px; }
 
 .footer {
-  background-color: black;
-  color: #ffffff; }
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 24px; }
 
 .footer .highlighted {
   color: #ffffff; }
@@ -142,7 +150,7 @@ html, button, input, select, textarea,
 
 @media (max-width: 600px) {
   .buttons {
-    padding: 0em 2em; }
+    padding: 0em 1em; }
 
   .header {
     background-image: url(../assets/header.svg);
