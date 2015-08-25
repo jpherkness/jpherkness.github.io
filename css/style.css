@@ -16,7 +16,7 @@ body {
   text-align: center; }
 
 .header {
-  background-color: #ffffff;
+  background-color: #192434;
   padding-top: 80px;
   padding-bottom: 0px;
   background-image: url(../assets/header.svg);
@@ -86,7 +86,7 @@ body {
     border-color: #e6ae00; }
 
 .about {
-  color: #626262;
+  color: #192434;
   background-color: #F9F9F9;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -97,7 +97,7 @@ body {
     text-decoration: none; }
 
 .skills {
-  color: #626262;
+  color: #192434;
   background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -109,7 +109,7 @@ body {
     font-size: 24px; }
 
 .passions {
-  color: #626262;
+  color: #192434;
   background-color: #F9F9F9;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -119,7 +119,7 @@ body {
     color: #9134EE; }
 
 .interests {
-  color: #626262;
+  color: #192434;
   background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -129,34 +129,76 @@ body {
     color: #FFC100; }
 
 /* Clouds */
-.cloud {
-  background-image: url(../assets/cloud.svg);
+.cloud-top {
+  background-image: url(../assets/cloud-top.svg);
+  background-size: cover;
+  background-position: center center;
+  height: 70px; }
+
+.cloud-bottom {
+  background-image: url(../assets/cloud-bottom.svg);
   background-size: cover;
   background-position: center center;
   height: 70px; }
 
 .footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #192434;
+  color: #606B83;
   font-size: 24px; }
 
 .footer .highlighted {
-  color: #ffffff; }
+  color: #FF4568; }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
 
-/* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media (max-width: 600px) {
   .buttons {
     padding: 0em 1em; }
 
   .header {
     background-image: url(../assets/header.svg);
     height: 50vh; } }
-/* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .header {
-    height: 100vh; } }
+/* PULSE */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8); }
+  100% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); } }
+.faa-pulse.animated,
+.faa-pulse.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-pulse {
+  -webkit-animation: pulse 2s linear infinite;
+  animation: pulse 2s linear infinite; }
+
+.faa-pulse.animated.faa-fast,
+.faa-pulse.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-fast {
+  -webkit-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite; }
+
+.faa-pulse.animated.faa-slow,
+.faa-pulse.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
+  -webkit-animation: pulse 3s linear infinite;
+  animation: pulse 3s linear infinite; }
