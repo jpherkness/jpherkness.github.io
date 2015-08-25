@@ -127,8 +127,3 @@ html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
-
-@media (max-width: 600px) {
-  .header {
-    padding: 0.5em 0.5em 0em 0em;
-    background-image: url(../assets/header-mobile.svg); } }
