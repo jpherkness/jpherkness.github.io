@@ -148,13 +148,15 @@ html, button, input, select, textarea,
   /* Set your content font stack here: */
   font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
 
-@media (max-width: 600px) {
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .buttons {
     padding: 0em 1em; }
 
   .header {
     background-image: url(../assets/header.svg);
     height: 50vh; } }
-@media (max-height: 600px) {
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .header {
     height: 100vh; } }

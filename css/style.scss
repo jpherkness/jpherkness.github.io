@@ -203,8 +203,13 @@ html, button, input, select, textarea,
     font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif;
 }
 
-@media (max-width: 600px) {
-	.buttons{
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	  .buttons{
 		padding: 0em 1em;
 	}
 	
@@ -214,8 +219,13 @@ html, button, input, select, textarea,
 	}
 }
 
-@media (max-height: 600px) {
-	.header{
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+	  .header{
 		height: 100vh;
 	}
 }
