@@ -213,3 +213,9 @@ html, button, input, select, textarea,
 		height: 50vh;
 	}
 }
+
+@media (max-height: 600px) {
+	.header{
+		height: 100vh;
+	}
+}
