@@ -204,10 +204,12 @@ body {
 	padding-left: 40px;
 	
 	.highlighted{
-		color: $pink;
+		color: white;
+		text-decoration: none;
 	}
 	
 	.fa-heart{
+		color: $pink;
 		font-size: 35px;
 		vertical-align: middle;
 	}
