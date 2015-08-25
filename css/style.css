@@ -16,7 +16,7 @@ body {
   text-align: center; }
 
 .header {
-  background-color: white;
+  background-color: #ffffff;
   padding-top: 80px;
   padding-bottom: 0px;
   background-image: url(../assets/header.svg);
@@ -24,30 +24,12 @@ body {
   background-position: center center;
   height: 60vh; }
 
-.header-image {
-  width: 100%;
-  max-height: 400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
 .profile-image {
   width: 300px;
   height: 300px;
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px; }
-
-.test-header {
-  background-color: white;
-  color: #626262;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-right: 40px;
-  padding-left: 40px; }
-
-.test-header .highlighted {
-  color: #FF4568; }
 
 .buttons {
   padding: 0em 1em; }
@@ -62,7 +44,7 @@ body {
   -webkit-border-radius: 100;
   -moz-border-radius: 100;
   border-radius: 100px;
-  color: #00ADFE;
+  color: #F9F9F9;
   font-size: 20px;
   background-color: transparent;
   padding: 15px 30px 15px 30px;
@@ -71,38 +53,30 @@ body {
   text-transform: capitalize;
   -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s; }
-
-.btn:hover {
-  background-color: #F9F9F9;
-  text-decoration: none;
-  color: white; }
-
-.btn:focus {
-  outline: none; }
+  .btn:hover {
+    background-color: #F9F9F9;
+    text-decoration: none;
+    color: white; }
+  .btn:focus {
+    outline: none; }
 
 .btn.resume {
   background-color: #00CE96;
-  color: white; }
-
-.btn.resume:hover {
-  background-color: #00CE96;
-  color: white; }
+  color: #ffffff; }
+  .btn.resume:hover {
+    background-color: #00b583; }
 
 .btn.linkedin {
   background-color: #00ADFE;
-  color: white; }
-
-.btn.linkedin:hover {
-  background-color: #00ADFE;
-  color: white; }
+  color: #ffffff; }
+  .btn.linkedin:hover {
+    background-color: #009ce5; }
 
 .btn.github {
   background-color: #9134EE;
-  color: white; }
-
-.btn.github:hover {
-  background-color: #9134EE;
-  color: white; }
+  color: #ffffff; }
+  .btn.github:hover {
+    background-color: #841cec; }
 
 .about {
   color: #626262;
@@ -111,41 +85,55 @@ body {
   padding-bottom: 100px;
   padding-right: 40px;
   padding-left: 40px; }
-
-.about .highlighted {
-  color: #00ADFE;
-  text-decoration: none; }
+  .about .highlighted {
+    color: #00ADFE;
+    text-decoration: none; }
 
 .skills {
   color: #626262;
-  background-color: white;
+  background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 40px;
   padding-left: 40px; }
+  .skills .highlighted {
+    color: #00CE96;
+    text-align: left;
+    font-size: 24px; }
 
-.skills .highlighted {
-  text-align: left;
-  color: #00CE96;
-  font-size: 24px; }
-
-.interests {
+.passions {
   color: #626262;
   background-color: #F9F9F9;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 40px;
   padding-left: 40px; }
+  .passions .highlighted {
+    color: #9134EE; }
 
-.interests .highlighted {
-  color: #9134EE; }
+.interests {
+  color: #626262;
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px; }
+  .interests .highlighted {
+    color: #FFC100; }
+
+/* Clouds */
+.cloud {
+  background-image: url(../assets/cloud.svg);
+  background-size: cover;
+  background-position: center center;
+  height: 70px; }
 
 .footer {
-  background-color: white;
-  color: #626262; }
+  background-color: black;
+  color: #ffffff; }
 
 .footer .highlighted {
-  color: #FF4568; }
+  color: #ffffff; }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
@@ -154,7 +142,8 @@ html, button, input, select, textarea,
 
 @media (max-width: 600px) {
   .buttons {
-    padding: 0em 0em; }
+    padding: 0em 2em; }
 
-  .text {
-    display: none; } }
+  .header {
+    background-image: url(../assets/header.svg);
+    height: 50vh; } }

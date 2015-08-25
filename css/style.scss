@@ -1,11 +1,11 @@
-$blueColor: #00ADFE;
-$purpleColor: #9134EE;
-$greenColor: #00CE96;
-$redColor: #FF4568;
-$greyColor: #F9F9F9;
-$darkGreyColor: #626262;
-$darkDarkGreyColor: #2A2A2C;
-$yellowColor: #F5D76E;
+$white: #ffffff;
+$blue: #00ADFE;
+$purple: #9134EE;
+$green: #00CE96;
+$red: #FF4568;
+$grey: #F9F9F9;
+$darkGrey: #626262;
+$yellow: #FFC100;
 
 $normalFontSize: 30px;
 $smallFontSize: 24px;
@@ -33,20 +33,13 @@ body {
 }
 //Header section
 .header{
-	background-color: white;
+	background-color: $white;
 	padding-top: 80px;
 	padding-bottom: 0px;
 	background-image: url(../assets/header.svg);
 	background-size: cover;
 	background-position: center center;
 	height: 60vh;
-}
-.header-image{
-	width:100%;
-	max-height: 400px;
-	display: block;
-    margin-left: auto;
-    margin-right: auto 
 }
 
 .profile-image{
@@ -55,20 +48,6 @@ body {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-}
-
-//Test Header section
-.test-header{
-	background-color: white;
-	color: $darkGreyColor;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-}
-
-.test-header .highlighted{
-	color: $redColor;
 }
 
 // Buttons section
@@ -87,110 +66,128 @@ body {
   	-webkit-border-radius: 100;
   	-moz-border-radius: 100;
   	border-radius: 100px;
-  	color: $blueColor;
+  	color: $grey;
   	font-size: 20px;
   	background-color: transparent;
   	padding: 15px 30px 15px 30px;
-  	border: solid $greyColor 2px;
+  	border: solid $grey 2px;
   	text-decoration: none;
 	text-transform: capitalize;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
    	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-}
-
-.btn:hover {
-  	background-color: $greyColor;
-  	text-decoration: none;
-	color:white;
-}
-
-.btn:focus {
-	outline: none;
+	
+	
+	&:hover {
+		background-color: $grey;
+		text-decoration: none;
+		color:white;
+	}
+	
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn.resume{
-	background-color: $greenColor;
-	color: white;
-}
-
-.btn.resume:hover{
-	background-color: $greenColor;
-	color: white;
+	background-color: $green;
+	color: $white;
+	&:hover{
+		background-color:darken($green, 5%);
+	}
 }
 
 .btn.linkedin{
-	background-color: $blueColor;
-	color:white;
-}
-
-.btn.linkedin:hover{
-	background-color: $blueColor;
-	color:white;
+	background-color: $blue;
+	color: $white;
+	&:hover{
+		background-color:darken($blue, 5%);
+	}
 }
 
 .btn.github{
-	background-color: $purpleColor;
-	color:white;
-}
-
-.btn.github:hover{
-	background-color: $purpleColor;
-	color:white;
+	background-color: $purple;
+	color: $white;
+	&:hover{
+		background-color:darken($purple, 5%);
+	}
 }
 
 // About section
 .about{
-	color: $darkGreyColor;
-	background-color: $greyColor;
+	color: $darkGrey;
+	background-color: $grey;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-right: 40px;
 	padding-left: 40px;
-}
-
-.about .highlighted{
-	color: $blueColor;
-	text-decoration: none;
+	
+	.highlighted{
+		color: $blue;
+		text-decoration: none;
+	}
 }
 
 //Skills section
 .skills{
-	color: $darkGreyColor;
-	background-color: white;
+	color: $darkGrey;
+	background-color: $white;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-right: 40px;
 	padding-left: 40px;
+	
+	.highlighted{
+		color: $green;
+		text-align: left;
+		font-size: $smallFontSize;
+	}
+}
+// Passions section
+.passions{
+	color: $darkGrey;
+	background-color: $grey;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-right: 40px;
+	padding-left: 40px;
+	
+	.highlighted{
+		color: $purple;
+	}
 }
 
-.skills .highlighted{
-	text-align: left;
-	color: $greenColor;
-	font-size: $smallFontSize;
-}
-// Interests section
 .interests{
-	color: $darkGreyColor;
-	background-color: $greyColor;
+	color: $darkGrey;
+	background-color: $white;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-right: 40px;
 	padding-left: 40px;
+	
+	.highlighted{
+		color: $yellow;
+	}
 }
 
-.interests .highlighted{
-	color: $purpleColor;
+
+/* Clouds */
+.cloud{
+	background-image: url(../assets/cloud.svg);
+	background-size: cover;
+	background-position: center center;
+	height: 70px;
 }
 
 // Footer section
 .footer{
-	background-color: white;
-	color: $darkGreyColor;
+	background-color: black;
+	color: $white;
 }
 
 .footer .highlighted{
-	color: $redColor;
+	color: $white;
 }
+
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
@@ -200,9 +197,11 @@ html, button, input, select, textarea,
 
 @media (max-width: 600px) {
 	.buttons{
-		padding: 0em 0em;
+		padding: 0em 2em;
 	}
-	.text{
-		display: none;
+	
+	.header{
+		background-image: url(../assets/header.svg);
+		height: 50vh;
 	}
 }
