@@ -147,9 +147,11 @@ body {
   font-size: 24px;
   padding-right: 40px;
   padding-left: 40px; }
-
-.footer .highlighted {
-  color: #FF4568; }
+  .footer .highlighted {
+    color: #FF005A; }
+  .footer .fa-heart {
+    font-size: 35px;
+    vertical-align: middle; }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
@@ -196,8 +198,8 @@ html, button, input, select, textarea,
 .faa-pulse.animated.faa-fast,
 .faa-pulse.animated-hover.faa-fast:hover,
 .faa-parent.animated-hover:hover > .faa-pulse.faa-fast {
-  -webkit-animation: pulse 1s linear infinite;
-  animation: pulse 1s linear infinite; }
+  -webkit-animation: pulse 1.5s linear infinite;
+  animation: pulse 1.5s linear infinite; }
 
 .faa-pulse.animated.faa-slow,
 .faa-pulse.animated-hover.faa-slow:hover,
