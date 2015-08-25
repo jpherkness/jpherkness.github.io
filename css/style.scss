@@ -19,7 +19,7 @@ $smallFontSize: 24px;
 	font-family: 'Frankfurter';
 	src: url(fonts/Frankfurter-Plain.ttf) format('truetype ');
 }
-	
+
 html {
 	overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ body {
 	background-image: url(../assets/header.svg);
 	background-size: cover;
 	background-position: center center;
-	height: 70vh;
+	height: 60vh;
 }
 .header-image{
 	width:100%;
@@ -90,8 +90,8 @@ body {
   	color: $blueColor;
   	font-size: 20px;
   	background-color: transparent;
-  	padding: 15px 20px 15px 20px;
-  	border: solid $blueColor 2px;
+  	padding: 15px 30px 15px 30px;
+  	border: solid $greyColor 2px;
   	text-decoration: none;
 	text-transform: capitalize;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
@@ -99,13 +99,43 @@ body {
 }
 
 .btn:hover {
-  	background-color: $blueColor;
+  	background-color: $greyColor;
   	text-decoration: none;
 	color:white;
 }
 
 .btn:focus {
 	outline: none;
+}
+
+.btn.resume{
+	border: solid $greenColor 2px;
+	color: $greenColor;
+}
+
+.btn.resume:hover{
+	background-color: $greenColor;
+	color: white;
+}
+
+.btn.linkedin{
+	border: solid $blueColor 2px;
+	color: $blueColor;
+}
+
+.btn.linkedin:hover{
+	background-color: $blueColor;
+	color:white;
+}
+
+.btn.github{
+	border: solid $purpleColor 2px;
+	color: $purpleColor;
+}
+
+.btn.github:hover{
+	background-color: $purpleColor;
+	color:white;
 }
 
 // About section
@@ -169,6 +199,10 @@ html, button, input, select, textarea,
 }
 
 @media (max-width: 600px) {
-	.header{
+	.buttons{
+		padding: 0em 0em;
+	}
+	.text{
+		visibility: hidden;
 	}
 }

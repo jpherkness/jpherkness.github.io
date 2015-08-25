@@ -22,7 +22,7 @@ body {
   background-image: url(../assets/header.svg);
   background-size: cover;
   background-position: center center;
-  height: 70vh; }
+  height: 60vh; }
 
 .header-image {
   width: 100%;
@@ -65,20 +65,44 @@ body {
   color: #00ADFE;
   font-size: 20px;
   background-color: transparent;
-  padding: 15px 20px 15px 20px;
-  border: solid #00ADFE 2px;
+  padding: 15px 30px 15px 30px;
+  border: solid #F9F9F9 2px;
   text-decoration: none;
   text-transform: capitalize;
   -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s; }
 
 .btn:hover {
-  background-color: #00ADFE;
+  background-color: #F9F9F9;
   text-decoration: none;
   color: white; }
 
 .btn:focus {
   outline: none; }
+
+.btn.resume {
+  border: solid #00CE96 2px;
+  color: #00CE96; }
+
+.btn.resume:hover {
+  background-color: #00CE96;
+  color: white; }
+
+.btn.linkedin {
+  border: solid #00ADFE 2px;
+  color: #00ADFE; }
+
+.btn.linkedin:hover {
+  background-color: #00ADFE;
+  color: white; }
+
+.btn.github {
+  border: solid #9134EE 2px;
+  color: #9134EE; }
+
+.btn.github:hover {
+  background-color: #9134EE;
+  color: white; }
 
 .about {
   color: #626262;
@@ -127,3 +151,10 @@ html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
+
+@media (max-width: 600px) {
+  .buttons {
+    padding: 0em 0em; }
+
+  .text {
+    visibility: hidden; } }
