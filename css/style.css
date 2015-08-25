@@ -81,24 +81,24 @@ body {
   outline: none; }
 
 .btn.resume {
-  border: solid #00CE96 2px;
-  color: #00CE96; }
+  background-color: #00CE96;
+  color: white; }
 
 .btn.resume:hover {
   background-color: #00CE96;
   color: white; }
 
 .btn.linkedin {
-  border: solid #00ADFE 2px;
-  color: #00ADFE; }
+  background-color: #00ADFE;
+  color: white; }
 
 .btn.linkedin:hover {
   background-color: #00ADFE;
   color: white; }
 
 .btn.github {
-  border: solid #9134EE 2px;
-  color: #9134EE; }
+  background-color: #9134EE;
+  color: white; }
 
 .btn.github:hover {
   background-color: #9134EE;

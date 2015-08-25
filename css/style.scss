@@ -109,8 +109,8 @@ body {
 }
 
 .btn.resume{
-	border: solid $greenColor 2px;
-	color: $greenColor;
+	background-color: $greenColor;
+	color: white;
 }
 
 .btn.resume:hover{
@@ -119,8 +119,8 @@ body {
 }
 
 .btn.linkedin{
-	border: solid $blueColor 2px;
-	color: $blueColor;
+	background-color: $blueColor;
+	color:white;
 }
 
 .btn.linkedin:hover{
@@ -129,8 +129,8 @@ body {
 }
 
 .btn.github{
-	border: solid $purpleColor 2px;
-	color: $purpleColor;
+	background-color: $purpleColor;
+	color:white;
 }
 
 .btn.github:hover{
