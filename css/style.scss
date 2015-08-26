@@ -14,6 +14,7 @@ $normalFontSize: 30px;
 $smallFontSize: 24px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300);
 @font-face{
 	font-family: 'Proxima Nova';
 	src: url(fonts/ProximaNova-Bold.otf) format('opentype');
@@ -53,6 +54,7 @@ body {
 	-moz-border-radius: 150px;
 }
 
+
 // Buttons section
 .buttons{
 	padding: 0em 1em;
@@ -71,7 +73,7 @@ body {
   	-moz-border-radius: 100;
   	border-radius: 100px;
   	color: white;
-  	font-size: 20px;
+  	font-size: 16px;
   	background-color: black;
   	padding: 15px 30px 15px 30px;
   	border: solid black 2px;
@@ -149,8 +151,11 @@ body {
 	.highlighted{
 		color: $green;
 		text-align: left;
-		font-size: $smallFontSize;
 	}
+}
+
+.small-text{
+	font-size: $smallFontSize;
 }
 // Passions section
 .passions{
@@ -185,14 +190,14 @@ body {
 	background-image: url(../assets/cloud-top.svg);
 	background-size: cover;
 	background-position: center center;
-	height: 70px;
+	height: 50px;
 }
 
 .cloud-bottom{
 	background-image: url(../assets/cloud-bottom.svg);
 	background-size: cover;
 	background-position: center center;
-	height: 70px;
+	height: 50px;
 }
 
 // Footer section
