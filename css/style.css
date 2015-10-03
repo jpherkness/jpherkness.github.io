@@ -158,6 +158,11 @@ body {
     font-size: 35px;
     vertical-align: middle; }
 
+#feed {
+  height: 400px;
+  text-align: left;
+  margin: 30px; }
+
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
