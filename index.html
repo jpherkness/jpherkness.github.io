@@ -18,6 +18,23 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
 		<!-- Import custom stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<!-- Github Activity Monitor -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+		<link rel="stylesheet" href="/github-activity/github-activity.min.css">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+		<script type="text/javascript" src="/github-activity/github-activity.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				GitHubActivity.feed({
+					username: 'jpherkness',
+					selector: '#feed'
+				});
+			});
+		</script>
 	</head>
 
 	<body>
@@ -63,6 +80,17 @@
 							</button>
 						</a>
 					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!-- about section -->
+		<section class="gh-feed">
+			<div class="pure-g">
+				<span class="pure-u-1 pure-u-md-1-4"></span>
+				<div class="pure-u-1 pure-u-md-1-2">
+					Find out what i'm up to!
+					<div id="feed"></div>
 				</div>
 			</div>
 		</section>
@@ -132,7 +160,7 @@
 				</div>
 			</div>
 		</section>
-
+		
 		<section class="cloud-top">
 		</section>
 		
