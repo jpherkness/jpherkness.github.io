@@ -32,19 +32,17 @@
 		<!-- header section -->
 		<section class="header">
 			<p>Hello, My name is</p>
-			<h1>Joseph Herkness</h1>
+			<h1 id="header-name">Joseph Herkness</h1>
 			<p>and I am a Computer Scientist</p>
 			
 			<br>
 			<br>
-			<div class="pure-g">
-				<span class=" pure-u-sm-1-6 pure-u-md-1-6 pure-u-lg-5-24 pure-u-xl-1-4"></span>
-				<div class="pure-u-1-1 pure-u-sm-2-3 pure-u-md-2-3 pure-u-lg-14-24 pure-u-xl-1-2">
-					<div class="pure-u-1-6"><a href=""><span class="smi fa fa-github"/></a></div>
-					<div class="pure-u-1-6"><a href=""><span class="smi fa fa-linkedin-square"/></a></div>
-					<div class="pure-u-1-6"><a href=""><span class="smi fa fa-file-text"/></a></div>
+				<div class="sm-header pure-u-1-1">
+					<a id="sm-button" href=""><span class="smi fa fa-github-alt"/></a>
+					<a id="sm-button" href=""><span class="smi fa fa-linkedin"/></a>
+					<a id="sm-button" href=""><span class="smi fa fa-file-text"/></a>
+					<a id="sm-button" href=""><span class="smi fa fa-google-plus"/></a>
 				</div>
-			</div>
 		</section>
 		
 		<!-- about section -->
@@ -52,7 +50,7 @@
 			<div class="pure-g">
 				<span class="pure-u-1 pure-u-md-1-4"></span>
 				<div class="pure-u-1 pure-u-md-1-2">
-					<h2>ABOUT ME</h2>
+					<h2>About Me</h2>
 					<p>I'm an Undergraduate Student studying Computer Science at <a href="http://wwwp.oakland.edu" target="_blank">Oakland University</a>.</p>
 				</div>
 			</div>
@@ -63,7 +61,7 @@
 			<div class="pure-g">
 				<span class="pure-u-1 pure-u-md-1-4"></span>
 				<div class="pure-u-1 pure-u-md-1-2">
-					<h2>SKILLS &amp; TOOLS</h2>
+					<h2>Skills &amp; Tools</h2>
 					<p>Here are some of the tools and skills I use all the time.</p>
 				</div>
 			</div>
@@ -121,7 +119,24 @@
 				for(var i=0; i<nodes.length; i++) {
 					nodes[i].className = nodes[i].className + "skill pure-u-1-3 pure-u-sm-1-3 pure-u-lg-1-4 pure-u-xl-1-4";
 				}
+				
+				// Picks a random header color
+				var colors = ['#F40233', '#00CE96', '#00ADFE', '#9134EE', '#FFD55C', '#384047'];
+				var color = colors[Math.floor(Math.random() * colors.length)];
+				
+				document.getElementById("header-name").style.color = color;
+				
+				
+				$( ".smi" ).hover(
+					function() {
+						$(this).css('background-color', color)
+					}, function() {
+						$(this).css('background-color', '')
+					}
+				);
+				
 			});
+		
 		</script>
 	</body>
 </html>

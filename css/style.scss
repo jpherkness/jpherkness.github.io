@@ -1,13 +1,11 @@
-$white: #ffffff;
-$blue2: #00ADFE;
 $blue: #00ADFE;
 $purple: #9134EE;
 $green: #00CE96;
 $red: #F40233;
 $pink: #FF005A;
 $lightGrey: #F9F9F9;
-$darkGrey: #192434;
-$grey: rgb(112, 124, 128);
+$darkGrey: #384047;
+$grey: #6b7476;
 $yellow: #FFC100;
 
 $darkBlue: #192434;
@@ -16,18 +14,20 @@ $normalFontSize: 34px;
 $smallFontSize: 26px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:900,400,300);
+
+//Gotham Font Face
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('fonts/ProximaNova.eot');
-  src: url('fonts/ProximaNova.eot?#iefix') format('embedded-opentype'),
-       url('fonts/ProximaNova.woff2') format('woff2'),
-       url('fonts/ProximaNova.woff') format('woff'),
-       url('fonts/ProximaNova.ttf') format('truetype'),
-       url('fonts/ProximaNova.svg#ProximaNova') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'GothamRounded';
+	src: url('fonts/Gotham-Rounded-Normal.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamRounded';
+	src: url('fonts/Gotham-Rounded-Medium.ttf') format('truetype');
+	font-weight: medium;
+	font-style: normal;
 }
 
 html {
@@ -42,19 +42,21 @@ body {
 	text-align: center;
 }
 
-//Header section
+// Header section
 .header{
-	background-color: $white;
+	background-color: white;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-right: 40px;
 	padding-left: 40px;
+	
 	h1{
-		font-family: 'Proxima Nova';
+		font-family: 'Gotham Rounded';
+		font-weight: medium;
 		font-size: 60px;	
 		font-weight: 700;
-		color: $red;
-		text-transform: uppercase;
+		color: $pink;
+		text-transform: none;
 		margin: 5px;
 	}
 	
@@ -65,9 +67,11 @@ body {
 	}
 	
 	.smi {
-		font-size: 30px;
-		color: $grey;
+		background-color: $grey;
+		font-size: 22px;
+		color: white;
 		text-align: center;
+		cursor: pointer;
 		
 		//Transitions
 		-webkit-transition: all 0.2s ease-out;
@@ -75,22 +79,16 @@ body {
 		-ms-transition: all 0.2s ease-out;
 		-o-transition: all 0.2s ease-out;
 		transition: all 0.2s ease-out;
+		
+		//Makes it round
+		width: 1.7em;
+		height: 1.7em;
+		line-height: 1.7em;
+		border-radius: 100px;
+		-moz-border-radius:100px;
+		-webkit-border-radius:100px;
+		padding: 0px;
 	}
-	
-	.smi:hover,
-	.smi:focus,
-	.smi:active {
-		transform: scale(1.4);
-		color: $red;
-	}
-}
-
-.profile-image{
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
 }
 
 // About section
@@ -103,9 +101,11 @@ body {
 	padding-left: 40px;
 	
 	h2{
-		font-size: $normalFontSize;	
+		font-size: $normalFontSize;
+		font-family: 'Gotham Rounded';
+		font-weight: medium;
 		color: $green;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 	
 	p{
@@ -123,9 +123,9 @@ body {
 	}
 }
 
-//Skills section
+// Skills section
 .skills{
-	background-color: $white;
+	background-color: white;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-right: 40px;
@@ -133,8 +133,10 @@ body {
 	
 	h2{
 		font-size: $normalFontSize;	
+		font-family: 'Gotham Rounded';
+		font-weight: medium;
 		color: $blue;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 	
 	p{
@@ -166,52 +168,10 @@ body {
 .small-text{
 	font-size: $smallFontSize;
 }
-// Passions section
-.passions{
-	color: $darkGrey;
-	background-color: $lightGrey;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-	
-	.highlighted{
-		color: $purple;
-	}
-}
-
-.interests{
-	color: $darkGrey;
-	background-color: $white;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-	
-	.highlighted{
-		color: $yellow;
-	}
-}
-
-
-/* Clouds */
-.cloud-top{
-	background-image: url(../assets/cloud-top.svg);
-	background-size: cover;
-	background-position: center center;
-	height: 50px;
-}
-
-.cloud-bottom{
-	background-image: url(../assets/cloud-bottom.svg);
-	background-size: cover;
-	background-position: center center;
-	height: 50px;
-}
 
 // Footer section
 .footer{
-	background-color: $white;
+	background-color: white;
 	font-size: $smallFontSize;
 	padding: 40px;
 	color: $grey;
