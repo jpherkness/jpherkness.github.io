@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:900,400,300);
 @font-face {
   font-family: 'Proxima Nova';
@@ -10,7 +11,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-weight: 300;
   font-size: 34px;
   line-height: 1.42857143;
@@ -23,11 +24,11 @@ body {
   padding-right: 40px;
   padding-left: 40px; }
   .header h1 {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'Proxima Nova';
     font-size: 60px;
+    font-weight: 700;
     color: #F40233;
     text-transform: uppercase;
-    letter-spacing: 5px;
     margin: 5px; }
   .header p {
     font-size: 30px;
@@ -109,9 +110,11 @@ body {
   .about p {
     color: #707c80;
     font-size: 26px; }
-  .about .highlighted {
-    color: #00ADFE;
+  .about a {
+    color: #707c80;
     text-decoration: none; }
+    .about a:hover {
+      color: #00CE96; }
 
 .skills {
   background-color: #ffffff;
@@ -193,7 +196,7 @@ body {
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Proxima Nova', Georgia, Times, "Times New Roman", serif; }
 
 /* PULSE */
 @-webkit-keyframes pulse {
