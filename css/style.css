@@ -11,7 +11,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 34px;
   line-height: 1.42857143;
@@ -196,7 +196,7 @@ body {
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: 'Proxima Nova', Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif; }
 
 /* PULSE */
 @-webkit-keyframes pulse {
