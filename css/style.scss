@@ -45,8 +45,8 @@ body {
 //Header section
 .header{
 	background-color: $white;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	padding-right: 40px;
 	padding-left: 40px;
 	h1{
@@ -63,6 +63,26 @@ body {
 		color: $grey;
 		margin: 5px;
 	}
+	
+	.smi {
+		font-size: 30px;
+		color: $grey;
+		text-align: center;
+		
+		//Transitions
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		-ms-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+	}
+	
+	.smi:hover,
+	.smi:focus,
+	.smi:active {
+		transform: scale(1.4);
+		color: $red;
+	}
 }
 
 .profile-image{
@@ -71,77 +91,6 @@ body {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-}
-
-
-
-// Buttons section
-.buttons{
-	padding: 0em 1em;
-	background-color: $white;
-}
-
-.button-container {
-    padding: 0.4em;
-}
-
-.btn {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	width:100%;
-  	-webkit-border-radius: 100;
-  	-moz-border-radius: 100;
-  	border-radius: 100px;
-  	color: white;
-  	font-size: 16px;
-  	background-color: black;
-  	padding: 15px 30px 15px 30px;
-  	border: solid black 2px;
-  	text-decoration: none;
-	text-transform: capitalize;
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-   	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-	
-	
-	&:hover {
-		background-color: black;
-		text-decoration: none;
-		color:white;
-	}
-	
-	&:focus {
-		outline: none;
-	}
-}
-
-.btn.resume{
-	background-color: $green;
-	color: $white;
-	border-color: $green;
-	&:hover{
-		background-color:darken($green, 5%);
-		border-color: darken($green, 5%);
-	}
-}
-
-.btn.linkedin{
-	background-color: $blue;
-	color: $white;
-	border-color: $blue;
-	&:hover{
-		background-color:darken($blue, 5%);
-		border-color: darken($blue, 5%);
-	}
-}
-
-.btn.github{
-	background-color: $yellow;
-	color: $white;
-	border-color: $yellow;
-	&:hover{
-		background-color:darken($yellow, 5%);
-		border-color: darken($yellow, 5%);
-	}
 }
 
 // About section
