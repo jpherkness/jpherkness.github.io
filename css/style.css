@@ -3,10 +3,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:900,400,300);
 @font-face {
   font-family: 'Proxima Nova';
-  src: url(fonts/ProximaNova-Bold.otf) format("opentype"); }
-@font-face {
-  font-family: 'Frankfurter';
-  src: url(fonts/Frankfurter-Plain.ttf) format("truetype "); }
+  src: url("fonts/ProximaNova.eot");
+  src: url("fonts/ProximaNova.eot?#iefix") format("embedded-opentype"), url("fonts/ProximaNova.woff2") format("woff2"), url("fonts/ProximaNova.woff") format("woff"), url("fonts/ProximaNova.ttf") format("truetype"), url("fonts/ProximaNova.svg#ProximaNova") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 html {
   overflow-x: hidden; }
 
