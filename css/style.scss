@@ -4,7 +4,7 @@ $darkBlue: #27355A;
 $lightGrey: #F9F9F9;
 $darkGrey: #545471;
 $purple: #9134EE;
-$green: #00CE96;
+$green: #01DB7C;
 $red: #FF395E;
 $grey: #6b7476;
 $yellow: #FFC100;
@@ -54,7 +54,6 @@ html {
 body {
 	font-family: 'Gotham Rounded', sans-serif;
 	font-weight: normal;
-	font-size: $sectionHeaderFontSize;
 	line-height: 1.42857143;
 	text-align: center;
 }
@@ -121,7 +120,7 @@ a{
 //Header
 .header{
 	background-color: white;
-	min-height: 70vh;
+	min-height: calc(100vh - 61px);
 
 	h1{
 		font-size: $headerFontSize;
@@ -193,7 +192,6 @@ a{
 //Skills section
 .skills{
 	@include section($darkGrey, $lightGrey, $darkGrey);
-
 	.skill {
 		font-size: 40px;
 		color: $darkGrey;
@@ -207,6 +205,22 @@ a{
 	}
 }
 
+/* This is how you would create a theme called "my-custom-theme": */
+.tooltip-theme {
+	border-radius: 5px;
+	border: 0px;
+	background: $blue;
+	color: #fff;
+
+	/* Use this next selector to style things like font-size and line-height: */
+	.tooltipster-content {
+		font-family: 'Gotham Rounded', Arial, sans-serif;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 8px 10px;
+	}
+}
+
 //Footer section
 .footer{
 	@include section($darkGrey, white, $darkGrey);
@@ -215,14 +229,12 @@ a{
 
 	.fa-heart{
 		color: $red;
-		vertical-align: middle;
-		padding: 0px 5px 0px 5px;
+		padding: 5px;
 	}
 
 	.fa-coffee{
 		color: $blue;
-		vertical-align: middle;
-		padding: 0px 5px 0px 5px;
+		padding: 5px;
 	}
 
 	.highlighted{
@@ -292,20 +304,4 @@ html, button, input, select, textarea,
 .faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
   -webkit-animation: pulse 3s linear infinite;
   animation: pulse 3s linear infinite;
-}
-
-/* This is how you would create a theme called "my-custom-theme": */
-.tooltip-theme {
-	border-radius: 5px;
-	border: 0px;
-	background: $blue;
-	color: #fff;
-
-	/* Use this next selector to style things like font-size and line-height: */
-	.tooltipster-content {
-		font-family: 'Gotham Rounded', Arial, sans-serif;
-		font-size: 16px;
-		line-height: 20px;
-		padding: 8px 10px;
-	}
 }

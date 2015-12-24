@@ -21,7 +21,6 @@ html {
 body {
   font-family: 'Gotham Rounded', sans-serif;
   font-weight: normal;
-  font-size: 24px;
   line-height: 1.42857143;
   text-align: center; }
 
@@ -46,7 +45,7 @@ a {
 
 .header {
   background-color: white;
-  min-height: 70vh; }
+  min-height: calc(100vh - 61px); }
   .header h1 {
     font-size: 40px;
     font-weight: normal;
@@ -165,6 +164,19 @@ a {
     .skills .skill:hover, .skills .skill:focus, .skills .skill:active {
       color: #179CEE; }
 
+/* This is how you would create a theme called "my-custom-theme": */
+.tooltip-theme {
+  border-radius: 5px;
+  border: 0px;
+  background: #179CEE;
+  color: #fff;
+  /* Use this next selector to style things like font-size and line-height: */ }
+  .tooltip-theme .tooltipster-content {
+    font-family: 'Gotham Rounded', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 10px; }
+
 .footer {
   background-color: white;
   padding: 70px 40px;
@@ -185,12 +197,10 @@ a {
     color: #545471; }
   .footer .fa-heart {
     color: #FF395E;
-    vertical-align: middle;
-    padding: 0px 5px 0px 5px; }
+    padding: 5px; }
   .footer .fa-coffee {
     color: #179CEE;
-    vertical-align: middle;
-    padding: 0px 5px 0px 5px; }
+    padding: 5px; }
   .footer .highlighted {
     font-weight: bold; }
 
@@ -240,16 +250,3 @@ html, button, input, select, textarea,
 .faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
   -webkit-animation: pulse 3s linear infinite;
   animation: pulse 3s linear infinite; }
-
-/* This is how you would create a theme called "my-custom-theme": */
-.tooltip-theme {
-  border-radius: 5px;
-  border: 0px;
-  background: #179CEE;
-  color: #fff;
-  /* Use this next selector to style things like font-size and line-height: */ }
-  .tooltip-theme .tooltipster-content {
-    font-family: 'Gotham Rounded', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 8px 10px; }

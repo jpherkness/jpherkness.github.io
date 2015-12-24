@@ -3,7 +3,9 @@ $(document).ready(function() {
   $('.tooltip').tooltipster({
     theme: 'tooltip-theme',
     position: 'right',
-    delay: 0
+    delay: 0,
+    animation: 'fade',
+    speed: '600'
   });
 
   var nodes = document.getElementById('s').childNodes;
