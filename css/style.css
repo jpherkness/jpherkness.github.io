@@ -160,16 +160,10 @@ a {
   .skills .skill {
     font-size: 45px;
     color: #6b7476;
-    text-align: center;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out; }
+    text-align: center; }
   .skills .skill:hover,
   .skills .skill:focus,
   .skills .skill:active {
-    transform: scale(1.4);
     color: #179CEE; }
 
 .footer {
@@ -241,3 +235,16 @@ html, button, input, select, textarea,
 .faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
   -webkit-animation: pulse 3s linear infinite;
   animation: pulse 3s linear infinite; }
+
+/* This is how you would create a theme called "my-custom-theme": */
+.tooltip-theme {
+  border-radius: 5px;
+  border: 0px;
+  background: #179CEE;
+  color: #fff;
+  /* Use this next selector to style things like font-size and line-height: */ }
+  .tooltip-theme .tooltipster-content {
+    font-family: 'Gotham Rounded', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 10px; }
