@@ -14,4 +14,6 @@ $(document).ready(function() {
       $(this).css('color','')
     }
   );
+
+  $(".tooltip").tooltipster();
 });
