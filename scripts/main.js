@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-  $(".tooltip").tooltipster();
+  $('.tooltip').tooltipster({
+    theme: 'tooltip-theme',
+    position: 'bottom',
+    delay: 0
+  });
 
   var nodes = document.getElementById('s').childNodes;
   for(var i=0; i<nodes.length; i++) {
@@ -16,4 +20,5 @@ $(document).ready(function() {
       $(this).css('color','')
     }
   );
+
 });

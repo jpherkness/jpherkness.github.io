@@ -198,19 +198,11 @@ a{
 		font-size: 45px;
 		color: $grey;
 		text-align: center;
-
-		//Transitions
-		-webkit-transition: all 0.2s ease-out;
-		-moz-transition: all 0.2s ease-out;
-		-ms-transition: all 0.2s ease-out;
-		-o-transition: all 0.2s ease-out;
-		transition: all 0.2s ease-out;
 	}
 
 	.skill:hover,
 	.skill:focus,
 	.skill:active {
-		transform: scale(1.4);
 		color: $blue;
 	}
 }
