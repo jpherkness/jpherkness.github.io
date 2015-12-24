@@ -1,74 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 	<head>
 		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="I am a computer science student who loves to program." />
-		<meta name="keywords" content="Joseph, Herkness, Computer, Science, Programmer, Oakland, University, Student, Application, Software, Engineer" />
+		<meta name="keywords" content="Joseph, Herkness, Computer, Science, Programmer, Oakland, University, Student, Application, Software, Engineer, Michigan" />
 		<meta name="author" content="metatags generator">
 		<title>Joseph Herkness - Personal Website</title>
 
 		<!-- PureCSS -->
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-		
+
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 		<!-- Dev Icons -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
 		<link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
 		<!-- Import custom stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		
-		<!-- Github Activity Monitor Stylesheets-->
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-		<link rel="stylesheet" href="/github-activity/github-activity.min.css">
 	</head>
 
 	<body>
-		
+		<!--
+		<div class="navigation">
+    	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Your Site</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+        </ul>
+    	</div>
+		</div>
+			-->
+
 		<!-- header section -->
-		<section class="header">
-			<p>Hello, My name is</p>
-			<h1 id="header-name">Joseph Herkness</h1>
-			<p>and I am a Computer Scientist</p>
-			
-			<br>
-			<br>
-				<div class="sm-header pure-u-1-1">
-					<a id="sm-button" target="_blank" href="https://github.com/jpherkness"><span class="smi fa fa-github-alt"/></a>
-					<a id="sm-button" target="_blank" href="https://www.linkedin.com/in/josephherkness"><span class="smi fa fa-linkedin"/></a>
-					<a id="sm-button" target="_blank" href="assets/Resume.pdf"><span class="smi fa fa-file-text"/></a>
-					<a id="sm-button" target="_blank" href="https://plus.google.com/110086909478505145017/about"><span class="smi fa fa-google-plus"/></a>
+		<header class="header wrap-flexbox">
+			<div class="inner-flexbox">
+				<h1 id="greeting">Hey there!<br>I'm <span id="name">Joseph Herkness</span><br>a software engineer</h1>
+
+				<!--
+				<div class="social-media-header pure-u-1-1">
+					<a id="sm-button" target="_blank" href="https://github.com/jpherkness"><span class="smi github fa fa-github-alt"/></a>
+					<a id="sm-button" target="_blank" href="https://www.linkedin.com/in/josephherkness"><span class="smi linkedin fa fa-linkedin"/></a>
+					<a id="sm-button" target="_blank" href="https://plus.google.com/110086909478505145017/about"><span class="smi google-plus fa fa-google-plus"/></a>
+					<a id="sm-button" target="_blank" href="https://twitter.com/jpherkness"><span class="smi twitter fa fa-twitter"/></a>
 				</div>
+				-->
+			</div>
+		</header>
+
+		<section class="social-media">
+			<div class="social-media-header">
+				<a class="btn" href="https://github.com/jpherkness"><span class="icon fa fa-github-alt"></span><span class="text">Github</span></a>
+				<a class="btn" href="https://www.linkedin.com/in/josephherkness"><span class="icon fa fa-linkedin"></span><span class="text">LinkedIn</span></a>
+				<a class="btn" href="https://plus.google.com/110086909478505145017/about"><span class="icon fa fa-google-plus"></span><span class="text">Google +</span></a>
+				<a class="btn" href="https://twitter.com/jpherkness"><span class="icon fa fa-twitter"></span><span class="text">Twitter</span></a>
+			</div>
 		</section>
-		
+
 		<!-- about section -->
 		<section class="about">
 			<div class="pure-g">
 				<span class="pure-u-1 pure-u-md-1-4"></span>
 				<div class="pure-u-1 pure-u-md-1-2">
-					<h2>About Me</h2>
-					<p>I'm an Undergraduate Student studying Computer Science at <a href="http://wwwp.oakland.edu" target="_blank">Oakland University</a>.</p>
+					<h1>About Me</h1>
+					<p>
+						My name is <span class="highlighted">Joseph</span>.
+						I'm an <span class="highlighted">Undergraduate Student</span> studying <span class="highlighted">Computer Science</span> at <a href="http://wwwp.oakland.edu" target="_blank">Oakland University</a>.
+						When I am not hanging out with my friends or studying for classes, I'm <span class="highlighted">programming</span>.
+						I love to <span class="highlighted">create</span> new and interesting things.
+						I have attended numerous <span class="highlighted">hackathons</span>, including MHacks and Spartahacks.
+					</p>
+					<a class="btn" href="assets/Resume.pdf">See Resume<i class="icon fa fa-file"></i></a>
 				</div>
 			</div>
 		</section>
-		
+
+		<!-- projects section -->
+		<section class="projects">
+			<div class="pure-g">
+				<span class="pure-u-1 pure-u-md-1-3"></span>
+				<div class="pure-u-1 pure-u-md-1-3">
+					<h1>Projects</h1>
+					<p>Check out my <span class="highlighted">github</span> to see what I've been up to.</p>
+					<a class="btn" href="assets/Resume.pdf">Github<i class="icon fa fa-github-alt"></i></a>
+				</div>
+			</div>
+			<div class="pure-g">
+				<span class="pure-u-1-5"></span>
+		</section>
+
 		<!-- skills section -->
 		<section class="skills">
 			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					<h2>Skills &amp; Tools</h2>
+				<span class="pure-u-1 pure-u-md-1-3"></span>
+				<div class="pure-u-1 pure-u-md-1-3">
+					<h1>Skills &amp; Tools</h1>
 					<p>Here are some of the tools and skills I use all the time.</p>
 				</div>
 			</div>
 			<div class="pure-g">
 				<span class=" pure-u-sm-1-6 pure-u-md-1-6 pure-u-lg-5-24 pure-u-xl-1-4"></span>
 				<div class="pure-u-1-1 pure-u-sm-2-3 pure-u-md-2-3 pure-u-lg-14-24 pure-u-xl-1-2">
-					<div id="s" class="pure-g small-text">
+					<div id="s" class="pure-g">
 						<div t="Java"><span class="devicons devicons-java"/></div>
 						<div t="Objective-C"><span class="devicons devicons-apple"/></div>
 						<div t="Swift"><span class="devicons devicons-swift"/></div>
@@ -93,50 +132,41 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- footer section -->
 		<section class="footer">
+
 			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					Made with <i class="faa-pulse animated faa-fast fa fa-heart highlighted"></i> by 
+				<span class="pure-u-1 pure-u-md-1-3"></span>
+				<div class="pure-u-1 pure-u-md-1-3">
+					Made with <i class="faa-pulse animated faa-fast fa fa-heart highlighted"></i> by me,
 					<a href="#" class="highlighted">Joseph Herkness</a>
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- Scripts -->
 		<!-- JQuery -->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		
+
 		<!-- Github Activity Monitor Scripts -->
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
 		<script type="text/javascript" src="/github-activity/github-activity.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				
-				var nodes = document.getElementById('s').childNodes;
-				for(var i=0; i<nodes.length; i++) {
-					nodes[i].className = nodes[i].className + "skill pure-u-1-3 pure-u-sm-1-3 pure-u-lg-1-4 pure-u-xl-1-4";
-				}
-				
-				// Picks a random header color
-				var colors = ['#F40233', '#00CE96', '#00ADFE', '#9134EE', '#FFD55C', '#384047'];
-				var color = colors[Math.floor(Math.random() * colors.length)];
-				
-				document.getElementById("header-name").style.color = color;
-				
-				
-				$( ".smi" ).hover(
+
+				$( ".smi-COMMENT" ).hover(
 					function() {
-						$(this).css('background-color', color)
+						$(this).css('background-color','#5f5f80')
+						$(this).css('color','#ffffff')
 					}, function() {
 						$(this).css('background-color', '')
+						$(this).css('color','')
 					}
 				);
-				
+
 			});
-		
+
 		</script>
 	</body>
 </html>

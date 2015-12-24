@@ -1,21 +1,28 @@
-$blue: #00ADFE;
+//Colors
+$blue: #179CEE;
+$darkBlue: #27355A;
+$lightGrey: #F9F9F9;
+$darkGrey: #545471;
 $purple: #9134EE;
 $green: #00CE96;
-$red: #F40233;
-$pink: #FF005A;
-$lightGrey: #F9F9F9;
-$darkGrey: #384047;
+$red: #FF395E;
 $grey: #6b7476;
 $yellow: #FFC100;
 
-$darkBlue: #192434;
+//Sections
+$defaultSectionColor: $darkGrey;
+$deafultSEctionBackgroundColor: white;
 
-$normalFontSize: 34px;
-$smallFontSize: 26px;
+//Buttons
+$defaultButtonBackgroundColor: $lightGrey;
+$defaultButtonColor: $darkGrey;
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+//Font Sizes
+$headerFontSize: 40px;
+$sectionHeaderFontSize: 24px;
+$sectionBodyFontSize: 16px;
 
-//Gotham Font Face
+//Gotham Rounded Font Face
 @font-face {
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Normal.ttf') format('truetype');
@@ -26,129 +33,171 @@ $smallFontSize: 26px;
 @font-face {
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Medium.ttf') format('truetype');
-	font-weight: medium;
+	font-weight: bold;
 	font-style: normal;
 }
 
+.wrap-flexbox {
+  display: flex;
+  justify-content: center;
+}
+.inner-flexbox {
+  align-self: center;
+}
+
+//Default HTML element styles
 html {
 	overflow-x: hidden;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: $normalFontSize;
+	font-family: 'Gotham Rounded', sans-serif;
+	font-weight: normal;
+	font-size: $sectionHeaderFontSize;
 	line-height: 1.42857143;
 	text-align: center;
 }
 
-// Header section
-.header{
-	background-color: white;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-	
+a{
+	text-decoration: none;
+}
+
+//Default Section style
+@mixin section($color, $backgroundColor, $highlightedColor) {
+	background-color: $backgroundColor;
+	padding: 70px 40px;
+	font-size: $sectionBodyFontSize;
+	color: $color;
+
 	h1{
-		font-family: 'Gotham Rounded';
-		font-weight: medium;
-		font-size: 60px;	
-		font-weight: 700;
-		color: $pink;
-		text-transform: none;
-		margin: 5px;
+		font-size: $sectionHeaderFontSize;
+		font-weight: normal;
 	}
-	
+
 	p{
-		font-size: 30px;	
-		color: $grey;
-		margin: 5px;
+		color: rgba($color, 0.60);
+		font-size: $sectionBodyFontSize;
+		font-weight: normal;
+		text-align: left;
 	}
-	
-	.smi {
-		background-color: $grey;
-		font-size: 22px;
-		color: white;
-		text-align: center;
-		cursor: pointer;
-		
-		//Transitions
-		-webkit-transition: all 0.2s ease-out;
-		-moz-transition: all 0.2s ease-out;
-		-ms-transition: all 0.2s ease-out;
-		-o-transition: all 0.2s ease-out;
-		transition: all 0.2s ease-out;
-		
-		//Makes it round
-		width: 1.7em;
-		height: 1.7em;
-		line-height: 1.7em;
-		border-radius: 100px;
-		-moz-border-radius:100px;
-		-webkit-border-radius:100px;
-		padding: 0px;
+
+	a{
+		color: $highlightedColor;
+	}
+
+	.highlighted{
+		color: $highlightedColor;
 	}
 }
 
-// About section
-.about{
-	color: $darkGrey;
-	background-color: $lightGrey;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-	
-	h2{
-		font-size: $normalFontSize;
-		font-family: 'Gotham Rounded';
-		font-weight: medium;
-		color: $green;
-		text-transform: none;
-	}
-	
-	p{
-		color: $grey;
-		font-size: $smallFontSize;
-	}
-	
-	a{
-		color: $grey;
+//Default Button Style
+@mixin btn($color, $backgroundColor, $colorOnHover, $backgroundColorOnHover) {
+	.btn{
+		color: $color;
+		background-color: $backgroundColor;
+		font-size: $sectionBodyFontSize;
+		font-weight: normal;
 		text-decoration: none;
-		
+		padding: 0 15px;
+		border-radius: 4px;
+		display: inline-block;
+		line-height: 41px;
+
 		&:hover{
-			color: $green;
+			color: $colorOnHover;
+			background-color: $backgroundColorOnHover;
+		}
+
+		.icon{
+			margin-left: 15px;
 		}
 	}
 }
 
-// Skills section
-.skills{
+@include btn($defaultButtonColor,$defaultButtonBackgroundColor,$defaultButtonColor,rgba($defaultButtonBackgroundColor, 0.70));
+
+
+//Header
+.header{
 	background-color: white;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	padding-right: 40px;
-	padding-left: 40px;
-	
-	h2{
-		font-size: $normalFontSize;	
-		font-family: 'Gotham Rounded';
-		font-weight: medium;
+	min-height: 70vh;
+
+	h1{
+		font-size: $headerFontSize;
+		font-weight: normal;
+		margin: 5px;
+	}
+	#greeting{ color: $darkGrey }
+	#name{ color: $blue }
+
+}
+
+//Social Media Section
+.social-media{
+	@include section(white, $darkGrey, white);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.btn{
+		color: white;
+		background-color: darken($darkGrey, 5);
+
+		&:hover{
+			background-color: lighten($darkGrey, 5);
+		}
+		.icon{
+			margin-left: 0px;
+			@media screen and (max-width: 600px) {
+				width: 20px;
+			}
+		}
+		.text{
+			margin-left: 15px;
+			@media screen and (max-width: 600px) {
+    		display: none;
+  		}
+		}
+	}
+}
+
+//About section
+.about{
+	@include section(white, $blue, white);
+
+	.btn{
 		color: $blue;
-		text-transform: none;
+		background-color: white;
+		margin-top: 40px;
+
+		&:hover{
+			background-color: rgba(white, 0.70)
+		}
 	}
-	
-	p{
-		color: $grey;
-		font-size: $smallFontSize;
+}
+
+//Projects section
+.projects{
+	@include section($darkGrey ,white, $darkGrey);
+
+	.btn{
+		background-color: $blue;
+		color: white;
+		margin-top: 40px;
+		&:hover{
+			background-color: rgba($blue, 0.70);
+			color: white;
+		}
 	}
+}
+
+//Skills section
+.skills{
+	@include section($darkGrey, $lightGrey, $darkGrey);
 
 	.skill {
 		font-size: 45px;
 		color: $grey;
 		text-align: center;
-		
+
 		//Transitions
 		-webkit-transition: all 0.2s ease-out;
 		-moz-transition: all 0.2s ease-out;
@@ -156,7 +205,7 @@ body {
 		-o-transition: all 0.2s ease-out;
 		transition: all 0.2s ease-out;
 	}
-	
+
 	.skill:hover,
 	.skill:focus,
 	.skill:active {
@@ -165,40 +214,29 @@ body {
 	}
 }
 
-.small-text{
-	font-size: $smallFontSize;
-}
-
-// Footer section
+//Footer section
 .footer{
-	background-color: white;
-	font-size: $smallFontSize;
-	padding: 40px;
-	color: $grey;
-	
-	.highlighted{
-		color: $red;
-		text-decoration: none;
-	}
-	
+	@include section($darkGrey, white, $red);
+
+	font-size: 20px;
+
 	.fa-heart{
 		color: $red;
-		font-size: 30px;
 		vertical-align: middle;
+		padding: 0px 5px 0px 5px;
 	}
 }
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif;
+    font-family: 'Gotham Rounded', Georgia, Times, "Times New Roman", serif;
 }
-/* PULSE */
-
+/* Pulse Animation */
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
 
   50% {
@@ -208,15 +246,15 @@ html, button, input, select, textarea,
 
   100% {
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
   }
 
   50% {
@@ -226,9 +264,9 @@ html, button, input, select, textarea,
   }
 
   100% {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
   }
 }
 
