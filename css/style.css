@@ -7,7 +7,7 @@
   font-family: 'Gotham Rounded';
   src: url("fonts/Gotham-Rounded-Medium.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: bold; }
 .wrap-flexbox {
   display: flex;
   justify-content: center; }
@@ -158,13 +158,12 @@ a {
   .skills .highlighted {
     color: #545471; }
   .skills .skill {
-    font-size: 45px;
-    color: #6b7476;
-    text-align: center; }
-  .skills .skill:hover,
-  .skills .skill:focus,
-  .skills .skill:active {
-    color: #179CEE; }
+    font-size: 40px;
+    color: #545471;
+    text-align: center;
+    line-height: 60px; }
+    .skills .skill:hover, .skills .skill:focus, .skills .skill:active {
+      color: #179CEE; }
 
 .footer {
   background-color: white;
@@ -181,13 +180,19 @@ a {
     font-weight: normal;
     text-align: left; }
   .footer a {
-    color: #FF395E; }
+    color: #545471; }
   .footer .highlighted {
-    color: #FF395E; }
+    color: #545471; }
   .footer .fa-heart {
     color: #FF395E;
     vertical-align: middle;
     padding: 0px 5px 0px 5px; }
+  .footer .fa-coffee {
+    color: #179CEE;
+    vertical-align: middle;
+    padding: 0px 5px 0px 5px; }
+  .footer .highlighted {
+    font-weight: bold; }
 
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {

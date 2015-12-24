@@ -35,7 +35,7 @@ $buttonFontSize: 16px;
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Medium.ttf') format('truetype');
 	font-weight: bold;
-	font-style: normal;
+	font-style: bold;
 }
 
 .wrap-flexbox {
@@ -195,21 +195,21 @@ a{
 	@include section($darkGrey, $lightGrey, $darkGrey);
 
 	.skill {
-		font-size: 45px;
-		color: $grey;
+		font-size: 40px;
+		color: $darkGrey;
 		text-align: center;
-	}
-
-	.skill:hover,
-	.skill:focus,
-	.skill:active {
-		color: $blue;
+		line-height: 60px;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $blue;
+		}
 	}
 }
 
 //Footer section
 .footer{
-	@include section($darkGrey, white, $red);
+	@include section($darkGrey, white, $darkGrey);
 
 	font-size: 20px;
 
@@ -217,6 +217,16 @@ a{
 		color: $red;
 		vertical-align: middle;
 		padding: 0px 5px 0px 5px;
+	}
+
+	.fa-coffee{
+		color: $blue;
+		vertical-align: middle;
+		padding: 0px 5px 0px 5px;
+	}
+
+	.highlighted{
+		font-weight: bold;
 	}
 }
 
