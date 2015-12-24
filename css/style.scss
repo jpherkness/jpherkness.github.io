@@ -20,7 +20,8 @@ $defaultButtonColor: $darkGrey;
 //Font Sizes
 $headerFontSize: 40px;
 $sectionHeaderFontSize: 24px;
-$sectionBodyFontSize: 16px;
+$sectionBodyFontSize: 18px;
+$buttonFontSize: 16px;
 
 //Gotham Rounded Font Face
 @font-face {
@@ -95,7 +96,7 @@ a{
 	.btn{
 		color: $color;
 		background-color: $backgroundColor;
-		font-size: $sectionBodyFontSize;
+		font-size: $buttonFontSize;
 		font-weight: normal;
 		text-decoration: none;
 		padding: 0 15px;
