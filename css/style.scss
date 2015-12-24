@@ -291,3 +291,19 @@ html, button, input, select, textarea,
   -webkit-animation: pulse 3s linear infinite;
   animation: pulse 3s linear infinite;
 }
+
+/* This is how you would create a theme called "my-custom-theme": */
+.tooltip-theme {
+	border-radius: 5px;
+	border: 0px;
+	background: $blue;
+	color: #fff;
+
+	/* Use this next selector to style things like font-size and line-height: */
+	.tooltipster-content {
+		font-family: 'Gotham Rounded', Arial, sans-serif;
+		font-size: 16px;
+		line-height: 20px;
+		padding: 8px 10px;
+	}
+}
