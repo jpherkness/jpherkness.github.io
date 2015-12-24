@@ -59,7 +59,7 @@ a {
 .social-media {
   background-color: #545471;
   padding: 70px 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px; }
@@ -68,7 +68,7 @@ a {
     font-weight: normal; }
   .social-media p {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     text-align: left; }
   .social-media a {
@@ -94,14 +94,14 @@ a {
 .about {
   background-color: #179CEE;
   padding: 70px 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: white; }
   .about h1 {
     font-size: 24px;
     font-weight: normal; }
   .about p {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     text-align: left; }
   .about a {
@@ -118,14 +118,14 @@ a {
 .projects {
   background-color: white;
   padding: 70px 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: #545471; }
   .projects h1 {
     font-size: 24px;
     font-weight: normal; }
   .projects p {
     color: rgba(84, 84, 113, 0.6);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     text-align: left; }
   .projects a {
@@ -143,14 +143,14 @@ a {
 .skills {
   background-color: #F9F9F9;
   padding: 70px 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: #545471; }
   .skills h1 {
     font-size: 24px;
     font-weight: normal; }
   .skills p {
     color: rgba(84, 84, 113, 0.6);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     text-align: left; }
   .skills a {
@@ -175,7 +175,7 @@ a {
 .footer {
   background-color: white;
   padding: 70px 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: #545471;
   font-size: 20px; }
   .footer h1 {
@@ -183,7 +183,7 @@ a {
     font-weight: normal; }
   .footer p {
     color: rgba(84, 84, 113, 0.6);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     text-align: left; }
   .footer a {
