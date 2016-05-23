@@ -1,134 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="I am a computer science student who loves to program." />
-		<meta name="keywords" content="Joseph, Herkness, Computer, Science, Programmer, Oakland, University, Student, Application, Software, Engineer, Michigan" />
-		<meta name="author" content="metatags generator">
-		<title>Joseph Herkness - Personal Website</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="I am a computer science student who loves to program." />
+	<meta name="keywords" content="Joseph, Herkness, Computer, Science, Programmer, Oakland, University, Student, Application, Software, Engineer, Michigan" />
+	<meta name="author" content="metatags generator">
+	<title>Joseph Herkness</title>
 
-		<!-- PureCSS -->
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!-- Flexbox Grid -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css">
 
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-		<!-- Dev Icons -->
-		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
-		<link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+	<!-- Devicons -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
+	<link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
 
-		<!-- tooltipster -->
-		 <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+	<!-- Tooltipster -->
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
 
-		<!-- Import custom stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-	<body>
+<body>
 
-		<!-- header section -->
-		<header class="header wrap-flexbox">
-			<div class="inner-flexbox">
-				<h1 id="greeting">Hey there!<br>I'm <span id="name">Joseph Herkness</span><br>a computer scientist</h1>
+	<!-- header section -->
+	<header class="header">
+		<div>
+			<h1 id="greeting">Hey there!
+				<br>I'm <span id="name">Joseph Herkness</span>
+				<br>a computer scientist
+			</h1>
+		</div>
+		<div class="social-media">
+			<a class="btn" href="https://github.com/jpherkness">
+				<span class="icon fa fa-github-alt"></span><span class="text">Github</span>
+			</a>
+			<a class="btn" href="https://www.linkedin.com/in/josephherkness">
+				<span class="icon fa fa-linkedin"></span><span class="text">LinkedIn</span>
+			</a>
+			<a class="btn" href="https://twitter.com/jpherkness">
+				<span class="icon fa fa-twitter"></span><span class="text">Twitter</span>
+			</a>
+		</div>
+	</header>
+
+	<!-- about section -->
+	<section class="about">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+				<h1>About Me</h1>
+				<p>
+					My name is <span class="highlighted">Joseph</span>. I'm an <span class="highlighted">Undergraduate Student</span> studying <span class="highlighted">Computer Science</span> at <a href="http://wwwp.oakland.edu" target="_blank">Oakland University</a>.
+					When I am not hanging out with my friends or studying for classes, I'm <span class="highlighted">programming</span>. I love to <span class="highlighted">create</span> new and interesting things. I have attended numerous <span class="highlighted">hackathons</span>,
+					including MHacks and Spartahacks.
+				</p>
+				<a class="btn" href="assets/Resume (No Private Information).pdf"><span class="icon fa fa-file"></span><span class="text">See Resume</span></a>
 			</div>
-		</header>
+		</div>
+	</section>
 
-		<section class="social-media">
-			<div class="social-media-header">
-				<a class="btn" href="https://github.com/jpherkness"><span class="icon fa fa-github-alt"></span><span class="text">Github</span></a>
-				<a class="btn" href="https://www.linkedin.com/in/josephherkness"><span class="icon fa fa-linkedin"></span><span class="text">LinkedIn</span></a>
-				<a class="btn" href="https://plus.google.com/110086909478505145017/about"><span class="icon fa fa-google-plus"></span><span class="text">Google +</span></a>
-				<a class="btn" href="https://twitter.com/jpherkness"><span class="icon fa fa-twitter"></span><span class="text">Twitter</span></a>
-			</div>
-		</section>
-
-		<!-- about section -->
-		<section class="about">
-			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					<h1>About Me</h1>
-					<p>
-						My name is <span class="highlighted">Joseph</span>.
-						I'm an <span class="highlighted">Undergraduate Student</span> studying <span class="highlighted">Computer Science</span> at <a href="http://wwwp.oakland.edu" target="_blank">Oakland University</a>.
-						When I am not hanging out with my friends or studying for classes, I'm <span class="highlighted">programming</span>.
-						I love to <span class="highlighted">create</span> new and interesting things.
-						I have attended numerous <span class="highlighted">hackathons</span>, including MHacks and Spartahacks.
-					</p>
-					<a class="btn" href="assets/Resume (Email Only).pdf">See Resume<i class="icon fa fa-file"></i></a>
+	<!-- projects section -->
+	<section class="projects">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+				<h1>Projects</h1>
+				<p>I am mostly interested in <span class="highlighted">mobile development</span>, <span class="highlighted">web development</span>, and <span class="highlighted">database development</span>.</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- projects section -->
-		<section class="projects">
-			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					<h1>Projects</h1>
-					<p>I am mostly interested in <span class="highlighted">mobile development</span>, <span class="highlighted">web development</span>, and <span class="highlighted">database development</span>.
-						 You can check out my <span class="highlighted">github</span> to see what I've been up to.</p>
-					<a class="btn" href="https://github.com/jpherkness">Github<i class="icon fa fa-github-alt"></i></a>
-				</div>
-			</div>
-			<div class="pure-g">
-				<span class="pure-u-1-5"></span>
-		</section>
-
-		<!-- skills section -->
-		<section class="skills">
-			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					<h1>Skills &amp; Tools</h1>
-					<p>As a software developer, I am <span class="highlighted">constantly learning new things</span>.
-						Here are some of the <span class="highlighted">tools</span> and <span class="highlighted">skills</span> I use all the time.</p>
-				</div>
-			</div>
-			<div class="pure-g">
-				<span class=" pure-u-sm-1-6 pure-u-md-1-6 pure-u-lg-5-24 pure-u-xl-1-4"></span>
-				<div class="pure-u-1-1 pure-u-sm-2-3 pure-u-md-2-3 pure-u-lg-14-24 pure-u-xl-1-2">
-					<div id="s" class="pure-g">
-						<div><span class="tooltip skill devicons devicons-java" title="Java"/></div>
-						<div><span class="tooltip skill devicons devicons-apple" title="Objective-C"/></div>
-						<div><span class="tooltip skill devicons devicons-swift" title="Swift"/></div>
-						<div><span class="tooltip skill devicons devicons-python" title="Python"/></div>
-						<div><span class="tooltip skill devicons devicons-android" title="Android"/></div>
-						<div><span class="tooltip skill devicons devicons-ruby_rough" title="Ruby"/></div>
-						<div><span class="tooltip skill devicons devicons-database" title="Firebase &amp; Parse"/></div>
-						<div><span class="tooltip skill devicons devicons-git" title="Git"/></div>
-						<div><span class="tooltip skill devicons devicons-terminal" title="Terminal"/></div>
-						<div><span class="tooltip skill devicons devicons-github_badge" title="Github"/></div>
-						<div><span class="tooltip skill devicons devicons-eclipse" title="Eclipse"/></div>
-						<div><span class="tooltip skill devicons devicons-html5" title="HTML"/></div>
-						<div><span class="tooltip skill devicons devicons-css3" title="CSS"/></div>
-						<div><span class="tooltip skill devicons devicons-javascript_badge" title="Javascript"/></div>
-						<div><span class="tooltip skill devicons devicons-bootstrap" title="Bootstrap"/></div>
-						<div><span class="tooltip skill devicons devicons-atom" title="Atom"/></div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="project-view">
+							<h1>SharedSpace</h1>
+							<p>Local event aggregation application written for Android</p>
+							<a class="btn" href="https://github.com/jpherkness/SharedSpace">LEARN MORE
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="project-view">
+							<h1>Studr</h1>
+							<p>iOS study session managment application created in 36 hours during MHacks 2015</p>
+							<a class="btn" href="http://devpost.com/software/studr">LEARN MORE
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="project-view">
+							<h1>Personal Website</h1>
+							<p>My personal website created and maintained by yours truly</p>
+							<a class="btn" href="https://github.com/jpherkness/jpherkness.github.io">LEARN MORE
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="project-view">
+							<h1>Ramsay</h1>
+							<p>Amazon Alexa voice activated kitchen assistant created in 36 hours during SpartaHack 2016</p>
+							<a class="btn" href="https://github.com/joshherkness/Ramsay">LEARN MORE
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="more-projects-view">
+							<h1>See More...</h1>
+							<p>If you want to see some of the other cool things I've worked on, check out my github page</p>
+							<a class="btn" href="https://github.com/jpherkness">GITHUB
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
+						</div>
 					</div>
 				</div>
+
 			</div>
-		</section>
 
-		<!-- footer section -->
-		<section class="footer">
+		</div>
+	</section>
 
-			<div class="pure-g">
-				<span class="pure-u-1 pure-u-md-1-4"></span>
-				<div class="pure-u-1 pure-u-md-1-2">
-					Made with <i class="faa-pulse animated faa-fast fa fa-heart"></i> and <i class="fa fa-coffee"></i> by
-					<a href="#" class="highlighted">Joseph Herkness</a>
+	<!-- skills section -->
+	<section class="skills">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+				<h1>Skills &amp; Tools</h1>
+				<p>As a software developer, I am <span class="highlighted">constantly learning new things</span>. Here are some of the <span class="highlighted">tools</span> and <span class="highlighted">skills</span> I use all the time.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+				<div id="s" class="row center-xs center-sm center-md center-lg">
+					<div><span class="tooltip skill devicons devicons-java" title="Java" /></div>
+					<div><span class="tooltip skill devicons devicons-apple" title="Objective-C" /></div>
+					<div><span class="tooltip skill devicons devicons-swift" title="Swift" /></div>
+					<div><span class="tooltip skill devicons devicons-python" title="Python" /></div>
+					<div><span class="tooltip skill devicons devicons-android" title="Android" /></div>
+					<div><span class="tooltip skill devicons devicons-nodejs_small" title="NodeJS" /></div>
+					<div><span class="tooltip skill devicons devicons-database" title="Firebase &amp; Parse" /></div>
+					<div><span class="tooltip skill devicons devicons-git" title="Git" /></div>
+					<div><span class="tooltip skill devicons devicons-github_badge" title="Github" /></div>
+					<div><span class="tooltip skill devicons devicons-html5" title="HTML" /></div>
+					<div><span class="tooltip skill devicons devicons-css3" title="CSS" /></div>
+					<div><span class="tooltip skill devicons devicons-javascript_badge" title="Javascript" /></div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Scripts -->
-		<!-- JQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="scripts/jquery.tooltipster.min.js"></script>
-		<script src="scripts/main.js"></script>
-	</body>
+	<!-- footer section -->
+	<section class="footer">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+				Made with <i class="faa-pulse animated faa-fast fa fa-heart"></i> and <i class="fa fa-coffee"></i> by
+				<a href="#" class="highlighted">Joseph Herkness</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<!-- JQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.tooltipster.min.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+
 </html>
