@@ -3,14 +3,12 @@ $(document).ready(function() {
   $('.tooltip').tooltipster({
     theme: 'tooltip-theme',
     position: 'right',
-    delay: 0,
-    animation: 'fade',
-    speed: '600'
+    delay: 0
   });
 
   var nodes = document.getElementById('s').childNodes;
   for(var i=0; i<nodes.length; i++) {
-    nodes[i].className = nodes[i].className + "pure-u-1-3 pure-u-sm-1-3 pure-u-lg-1-4 pure-u-xl-1-4";
+    nodes[i].className = nodes[i].className + "col-md-3 col-sm-3 col-xs-4";
   }
 
   $( ".smi-COMMENT" ).hover(

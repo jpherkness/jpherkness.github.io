@@ -1,98 +1,79 @@
 //Colors
-$blue: #179CEE;
+$blue: #33BBA1;
 $darkBlue: #27355A;
 $lightGrey: #F9F9F9;
-$darkGrey: #545471;
+$darkGrey: #5B707D;
 $purple: #9134EE;
-$green: #01DB7C;
-$red: #FF395E;
+$green: #01C26E;
+$red: #F33363;
 $grey: #6b7476;
 $yellow: #FFC100;
-
+$slate: #81A2BF;
+$gradient: linear-gradient(to left, #01C26E , #56B4D3);
 //Sections
 $defaultSectionColor: $darkGrey;
-$deafultSEctionBackgroundColor: white;
-
-//Buttons
+$deafultSEctionBackgroundColor: white; //Buttons
 $defaultButtonBackgroundColor: $lightGrey;
-$defaultButtonColor: $darkGrey;
-
-//Font Sizes
+$defaultButtonColor: $darkGrey; //Font Sizes
 $headerFontSize: 40px;
 $sectionHeaderFontSize: 24px;
 $sectionBodyFontSize: 18px;
-$buttonFontSize: 16px;
+$buttonFontSize: 16px; //Gotham Rounded Font Face
 
-//Gotham Rounded Font Face
 @font-face {
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Normal.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Medium.ttf') format('truetype');
 	font-weight: bold;
 	font-style: bold;
 }
-
-.wrap-flexbox {
-  display: flex;
-  justify-content: center;
-}
-.inner-flexbox {
-  align-self: center;
-}
-
-//Default HTML element styles
+//Default element styles
 html {
 	overflow-x: hidden;
 }
-
 body {
 	font-family: 'Gotham Rounded', sans-serif;
 	font-weight: normal;
-	line-height: 1.42857143;
+	line-height: 1.4;
 	text-align: center;
+	margin: 0;
 }
-
-a{
+a {
 	text-decoration: none;
 }
-
 //Default Section style
 @mixin section($color, $backgroundColor, $highlightedColor) {
 	background-color: $backgroundColor;
-	padding: 70px 40px;
+	padding: 40px;
 	font-size: $sectionBodyFontSize;
 	color: $color;
-
-	h1{
+	h1 {
 		font-size: $sectionHeaderFontSize;
 		font-weight: normal;
+		margin: 0 0 20px;
 	}
-
-	p{
+	p {
 		color: rgba($color, 0.60);
 		font-size: $sectionBodyFontSize;
 		font-weight: normal;
-		text-align: left;
+		text-align: center;
+		margin-bottom: 40px;
 	}
-
-	a{
+	a {
 		color: $highlightedColor;
 	}
-
-	.highlighted{
+	.highlighted {
 		color: $highlightedColor;
 	}
 }
-
 //Default Button Style
 @mixin btn($color, $backgroundColor, $colorOnHover, $backgroundColorOnHover) {
-	.btn{
+	.btn {
 		color: $color;
 		background-color: $backgroundColor;
 		font-size: $buttonFontSize;
@@ -102,116 +83,166 @@ a{
 		border-radius: 4px;
 		display: inline-block;
 		line-height: 41px;
-
-		&:hover{
+		&:hover {
 			color: $colorOnHover;
 			background-color: $backgroundColorOnHover;
 		}
-
-		.icon{
+		.icon {
+			margin-left: 0;
+		}
+		.text {
 			margin-left: 15px;
 		}
 	}
 }
-
 @include btn($defaultButtonColor,$defaultButtonBackgroundColor,$defaultButtonColor,rgba($defaultButtonBackgroundColor, 0.70));
-
 //Header
-.header{
-	background-color: white;
-	min-height: calc(100vh - 61px);
-
-	h1{
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: $gradient;
+	min-height: 100vh;
+	position: relative;
+	h1 {
 		font-size: $headerFontSize;
 		font-weight: normal;
 		margin: 5px;
 	}
-	#greeting{ color: $darkGrey }
-	#name{ color: $blue }
-
-}
-
-//Social Media Section
-.social-media{
-	@include section(white, $darkGrey, white);
-	padding-top: 10px;
-	padding-bottom: 10px;
-	.btn{
+	#greeting {
+		color: rgba(white,0.5);
+	}
+	#name {
 		color: white;
-		background-color: darken($darkGrey, 5);
+	}
 
-		&:hover{
-			background-color: lighten($darkGrey, 5);
+	.social-media{
+		@include btn(#33BBA1,white,#33BBA1,rgba(white, 0.5));
+		background-color: transparentize(white, 1);
+		position: absolute;
+		bottom: 120px;
+		@media screen and (max-width: 600px) {
+			bottom: 20px;
 		}
-		.icon{
-			margin-left: 0px;
-			@media screen and (max-width: 600px) {
-				width: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		.btn {
+			.text {
+				@media screen and (max-width: 600px) {
+					display: none;
+				}
 			}
 		}
-		.text{
-			margin-left: 15px;
-			@media screen and (max-width: 600px) {
-    		display: none;
-  		}
-		}
 	}
 }
-
 //About section
-.about{
-	@include section(white, $blue, white);
-
-	.btn{
-		color: $blue;
-		background-color: white;
-		margin-top: 40px;
-
-		&:hover{
-			background-color: rgba(white, 0.70)
-		}
-	}
+.about {
+	@include section($darkGrey, $lightGrey, $darkGrey);
+	@include btn(white,$blue,white,rgba($blue, 0.70));
 }
-
 //Projects section
-.projects{
+.projects {
 	@include section($darkGrey ,white, $darkGrey);
-
-	.btn{
-		background-color: $blue;
-		color: white;
-		margin-top: 40px;
-		&:hover{
-			background-color: rgba($blue, 0.70);
-			color: white;
+	@include btn(white,$blue,white,rgba($blue, 0.70));
+	.project-view {
+		//box-shadow: rgba(17, 17, 17, 0.03) 0px 2px 3px 0px, rgba(17, 17, 17, 0.0980392) 0px 0px 0px 1px;
+		background-color: #F7F7F7;
+		border-radius: 4px;
+		padding: 20px;
+		margin-bottom: 20px;
+		height: 170px;
+		position: relative;
+		h1 {
+			font-size: 20px;
+			margin: 0 0 10px;
+			color: $darkGrey;
+			text-align: left;
+		}
+		p {
+			font-size: 14px;
+			text-align: left;
+			color: $darkGrey;
+		}
+		@include btn(white,$green,white,rgba($green, 0.7));
+		.btn {
+			margin-top: 10px;
+			font-size: 12px;
+			padding: 10px;
+			line-height: 1em;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+		}
+	}
+	.more-projects-view{
+		border-radius: 4px;
+		background-color: $lightGrey;
+		padding: 20px;
+		margin-bottom: 20px;
+		height: 170px;
+		position: relative;
+		h1 {
+			font-size: 20px;
+			margin: 0 0 10px;
+			color: $darkGrey;
+			text-align: left;
+		}
+		p {
+			font-size: 14px;
+			text-align: left;
+			color: $darkGrey;
+		}
+		@include btn(white,$slate,white,rgba($slate, 0.7));
+		.btn {
+			margin-top: 10px;
+			font-size: 12px;
+			padding: 10px;
+			line-height: 1em;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
 		}
 	}
 }
-
 //Skills section
-.skills{
+.skills {
 	@include section($darkGrey, $lightGrey, $darkGrey);
 	.skill {
 		font-size: 40px;
 		color: $darkGrey;
 		text-align: center;
 		line-height: 60px;
-		&:hover,
+		&:active,
 		&:focus,
-		&:active {
+		&:hover {
 			color: $blue;
 		}
 	}
 }
-
-/* This is how you would create a theme called "my-custom-theme": */
+//Footer section
+.footer {
+	@include section($darkGrey, white, $darkGrey);
+	font-size: 20px;
+	.fa-heart {
+		color: $red;
+		padding: 5px;
+	}
+	.fa-coffee {
+		color: $blue;
+		padding: 5px;
+	}
+	.highlighted {
+		font-weight: bold;
+	}
+}
+//Tooltip Theme
 .tooltip-theme {
 	border-radius: 5px;
-	border: 0px;
+	border: 0;
 	background: $blue;
 	color: #fff;
-
-	/* Use this next selector to style things like font-size and line-height: */
 	.tooltipster-content {
 		font-family: 'Gotham Rounded', Arial, sans-serif;
 		font-size: 14px;
@@ -219,88 +250,53 @@ a{
 		padding: 8px 10px;
 	}
 }
-
-//Footer section
-.footer{
-	@include section($darkGrey, white, $darkGrey);
-
-	font-size: 20px;
-
-	.fa-heart{
-		color: $red;
-		padding: 5px;
-	}
-
-	.fa-coffee{
-		color: $blue;
-		padding: 5px;
-	}
-
-	.highlighted{
-		font-weight: bold;
-	}
-}
-
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: 'Gotham Rounded', Georgia, Times, "Times New Roman", serif;
-}
-/* Pulse Animation */
+//Pulse Animation
 @-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.0);
-  }
-
-  50% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.0);
-  }
+	0% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.0);
+	}
+	50% {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.0);
+	}
 }
-
 @keyframes pulse {
-  0% {
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-
-  50% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-
-  100% {
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    transform: scale(1.0);
-  }
+	0% {
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+	50% {
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	100% {
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
 }
-
+.faa-parent.animated-hover:hover > .faa-pulse,
 .faa-pulse.animated,
-.faa-pulse.animated-hover:hover,
-.faa-parent.animated-hover:hover > .faa-pulse {
-  -webkit-animation: pulse 2s linear infinite;
-  animation: pulse 2s linear infinite;
+.faa-pulse.animated-hover:hover {
+	-webkit-animation: pulse 2s linear infinite;
+	animation: pulse 2s linear infinite;
 }
-
-.faa-pulse.animated.faa-fast,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-fast,
 .faa-pulse.animated-hover.faa-fast:hover,
-.faa-parent.animated-hover:hover > .faa-pulse.faa-fast {
-  -webkit-animation: pulse 1.5s linear infinite;
-  animation: pulse 1.5s linear infinite;
+.faa-pulse.animated.faa-fast {
+	-webkit-animation: pulse 1.5s linear infinite;
+	animation: pulse 1.5s linear infinite;
 }
-
-.faa-pulse.animated.faa-slow,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-slow,
 .faa-pulse.animated-hover.faa-slow:hover,
-.faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
-  -webkit-animation: pulse 3s linear infinite;
-  animation: pulse 3s linear infinite;
+.faa-pulse.animated.faa-slow {
+	-webkit-animation: pulse 3s linear infinite;
+	animation: pulse 3s linear infinite;
 }
