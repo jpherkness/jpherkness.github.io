@@ -1,25 +1,16 @@
 //Colors
-$blue: #33BBA1;
-$darkBlue: #27355A;
-$lightGrey: #F9F9F9;
+$blue: #09A0F6;
+$lightBlue: #F6F9FA;
 $darkGrey: #5B707D;
-$purple: #9134EE;
-$green: #01C26E;
-$red: #F33363;
-$grey: #6b7476;
-$yellow: #FFC100;
 $slate: #81A2BF;
-$gradient: linear-gradient(to left, #01C26E , #56B4D3);
-//Sections
-$defaultSectionColor: $darkGrey;
-$deafultSEctionBackgroundColor: white; //Buttons
-$defaultButtonBackgroundColor: $lightGrey;
-$defaultButtonColor: $darkGrey; //Font Sizes
+$red: #F33363;
+$gradient: linear-gradient(-45deg, #0059BB , #09A0F6);
 $headerFontSize: 40px;
 $sectionHeaderFontSize: 24px;
 $sectionBodyFontSize: 18px;
-$buttonFontSize: 16px; //Gotham Rounded Font Face
-
+$normalButtonFontSize: 16px;
+$smallButtonFontSize: 12px;
+//Fonts
 @font-face {
 	font-family: 'Gotham Rounded';
 	src: url('fonts/Gotham-Rounded-Normal.ttf') format('truetype');
@@ -33,10 +24,7 @@ $buttonFontSize: 16px; //Gotham Rounded Font Face
 	font-style: bold;
 }
 //Default element styles
-html {
-	overflow-x: hidden;
-}
-body {
+html, body {
 	font-family: 'Gotham Rounded', sans-serif;
 	font-weight: normal;
 	line-height: 1.4;
@@ -61,7 +49,6 @@ a {
 		color: rgba($color, 0.60);
 		font-size: $sectionBodyFontSize;
 		font-weight: normal;
-		text-align: center;
 		margin-bottom: 40px;
 	}
 	a {
@@ -72,30 +59,30 @@ a {
 	}
 }
 //Default Button Style
-@mixin btn($color, $backgroundColor, $colorOnHover, $backgroundColorOnHover) {
+@mixin btn($textColor, $backgroundColor) {
 	.btn {
-		color: $color;
+		color: $textColor;
 		background-color: $backgroundColor;
-		font-size: $buttonFontSize;
-		font-weight: normal;
+		font-size: $normalButtonFontSize;
 		text-decoration: none;
-		padding: 0 15px;
+		padding: 6px 12px;
 		border-radius: 4px;
 		display: inline-block;
-		line-height: 41px;
 		&:hover {
-			color: $colorOnHover;
-			background-color: $backgroundColorOnHover;
-		}
-		.icon {
-			margin-left: 0;
+			color: $textColor;
+			background-color: rgba($backgroundColor, 0.7);
 		}
 		.text {
-			margin-left: 15px;
+			margin-left: 12px;
 		}
 	}
 }
-@include btn($defaultButtonColor,$defaultButtonBackgroundColor,$defaultButtonColor,rgba($defaultButtonBackgroundColor, 0.70));
+@mixin btn-small($textColor, $backgroundColor) {
+	@include btn($textColor, $backgroundColor);
+	.btn {
+		font-size: $smallButtonFontSize;
+	}
+}
 //Header
 .header {
 	display: flex;
@@ -116,18 +103,14 @@ a {
 		color: white;
 	}
 
-	.social-media{
-		@include btn(#33BBA1,white,#33BBA1,rgba(white, 0.5));
-		background-color: transparentize(white, 1);
+	.social-wrapper{
+		background-color: none;
 		position: absolute;
 		bottom: 120px;
-		@media screen and (max-width: 600px) {
-			bottom: 20px;
-		}
-		margin-left: auto;
-		margin-right: auto;
+		@media screen and (max-width: 600px) { bottom: 30px;}
 		left: 0;
 		right: 0;
+		@include btn(#0376D3,white);
 		.btn {
 			.text {
 				@media screen and (max-width: 600px) {
@@ -139,92 +122,64 @@ a {
 }
 //About section
 .about {
-	@include section($darkGrey, $lightGrey, $darkGrey);
-	@include btn(white,$blue,white,rgba($blue, 0.70));
+	@include section($darkGrey, $lightBlue, $darkGrey);
+	@include btn(white,$blue);
 }
 //Projects section
 .projects {
 	@include section($darkGrey ,white, $darkGrey);
-	@include btn(white,$blue,white,rgba($blue, 0.70));
-	.project-view {
-		//box-shadow: rgba(17, 17, 17, 0.03) 0px 2px 3px 0px, rgba(17, 17, 17, 0.0980392) 0px 0px 0px 1px;
-		background-color: #F7F7F7;
+	@include btn(white,$blue);
+	.project-wrapper{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+	.project{
+		@include btn-small(white,$blue);
+		display: flex;
+		flex:1 1 25%;
+		@media screen and (max-width: 600px) { flex:100%;}
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 10px 10px 10px 10px;
+		background-color: $lightBlue;
 		border-radius: 4px;
 		padding: 20px;
-		margin-bottom: 20px;
-		height: 170px;
 		position: relative;
-		h1 {
-			font-size: 20px;
-			margin: 0 0 10px;
-			color: $darkGrey;
-			text-align: left;
-		}
-		p {
-			font-size: 14px;
-			text-align: left;
-			color: $darkGrey;
-		}
-		@include btn(white,$green,white,rgba($green, 0.7));
-		.btn {
-			margin-top: 10px;
-			font-size: 12px;
-			padding: 10px;
-			line-height: 1em;
-			position: absolute;
-			bottom: 20px;
-			right: 20px;
-		}
-	}
-	.more-projects-view{
-		border-radius: 4px;
-		background-color: $lightGrey;
-		padding: 20px;
-		margin-bottom: 20px;
-		height: 170px;
-		position: relative;
-		h1 {
-			font-size: 20px;
-			margin: 0 0 10px;
-			color: $darkGrey;
-			text-align: left;
-		}
-		p {
-			font-size: 14px;
-			text-align: left;
-			color: $darkGrey;
-		}
-		@include btn(white,$slate,white,rgba($slate, 0.7));
-		.btn {
-			margin-top: 10px;
-			font-size: 12px;
-			padding: 10px;
-			line-height: 1em;
-			position: absolute;
-			bottom: 20px;
-			right: 20px;
-		}
-	}
-}
-//Skills section
-.skills {
-	@include section($darkGrey, $lightGrey, $darkGrey);
-	.skill {
-		font-size: 40px;
 		color: $darkGrey;
-		text-align: center;
-		line-height: 60px;
-		&:active,
-		&:focus,
-		&:hover {
-			color: $blue;
+		text-align: left;
+		h1 {
+			font-size: 20px;
+			margin: 0 0 10px 0;
 		}
+		p {
+			font-size: 14px;
+			margin: 0 0 10px 0;
+		}
+		a.btn{
+			text-transform: uppercase;
+		}
+		.tag-wrapper{
+			display:flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		a.tag{
+			font-size: $smallButtonFontSize;
+			text-transform: uppercase;
+			border-radius: 4px;
+			padding: 6px 12px;
+			background-color: darken($lightBlue, 4);
+			margin: 0px 5px 5px 0px;
+		}
+	}
+	.github-ad{
+		@include btn-small(white,$slate);
 	}
 }
 //Footer section
 .footer {
 	@include section($darkGrey, white, $darkGrey);
-	font-size: 20px;
 	.fa-heart {
 		color: $red;
 		padding: 5px;
@@ -232,9 +187,6 @@ a {
 	.fa-coffee {
 		color: $blue;
 		padding: 5px;
-	}
-	.highlighted {
-		font-weight: bold;
 	}
 }
 //Tooltip Theme

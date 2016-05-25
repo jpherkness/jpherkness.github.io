@@ -8,10 +8,7 @@
   src: url("fonts/Gotham-Rounded-Medium.ttf") format("truetype");
   font-weight: bold;
   font-style: bold; }
-html {
-  overflow-x: hidden; }
-
-body {
+html, body {
   font-family: 'Gotham Rounded', sans-serif;
   font-weight: normal;
   line-height: 1.4;
@@ -21,29 +18,11 @@ body {
 a {
   text-decoration: none; }
 
-.btn {
-  color: #5B707D;
-  background-color: #F9F9F9;
-  font-size: 16px;
-  font-weight: normal;
-  text-decoration: none;
-  padding: 0 15px;
-  border-radius: 4px;
-  display: inline-block;
-  line-height: 41px; }
-  .btn:hover {
-    color: #5B707D;
-    background-color: rgba(249, 249, 249, 0.7); }
-  .btn .icon {
-    margin-left: 0; }
-  .btn .text {
-    margin-left: 15px; }
-
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(to left, #01C26E, #56B4D3);
+  background-image: linear-gradient(-45deg, #0059BB, #09A0F6);
   min-height: 100vh;
   position: relative; }
   .header h1 {
@@ -54,40 +33,34 @@ a {
     color: rgba(255, 255, 255, 0.5); }
   .header #name {
     color: white; }
-  .header .social-media {
-    background-color: rgba(255, 255, 255, 0);
+  .header .social-wrapper {
+    background-color: none;
     position: absolute;
     bottom: 120px;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0; }
-    .header .social-media .btn {
-      color: #33BBA1;
+    @media screen and (max-width: 600px) {
+      .header .social-wrapper {
+        bottom: 30px; } }
+    .header .social-wrapper .btn {
+      color: #0376D3;
       background-color: white;
       font-size: 16px;
-      font-weight: normal;
       text-decoration: none;
-      padding: 0 15px;
+      padding: 6px 12px;
       border-radius: 4px;
-      display: inline-block;
-      line-height: 41px; }
-      .header .social-media .btn:hover {
-        color: #33BBA1;
-        background-color: rgba(255, 255, 255, 0.5); }
-      .header .social-media .btn .icon {
-        margin-left: 0; }
-      .header .social-media .btn .text {
-        margin-left: 15px; }
+      display: inline-block; }
+      .header .social-wrapper .btn:hover {
+        color: #0376D3;
+        background-color: rgba(255, 255, 255, 0.7); }
+      .header .social-wrapper .btn .text {
+        margin-left: 12px; }
     @media screen and (max-width: 600px) {
-      .header .social-media {
-        bottom: 20px; } }
-    @media screen and (max-width: 600px) {
-      .header .social-media .btn .text {
+      .header .social-wrapper .btn .text {
         display: none; } }
 
 .about {
-  background-color: #F9F9F9;
+  background-color: #F6F9FA;
   padding: 40px;
   font-size: 18px;
   color: #5B707D; }
@@ -99,7 +72,6 @@ a {
     color: rgba(91, 112, 125, 0.6);
     font-size: 18px;
     font-weight: normal;
-    text-align: center;
     margin-bottom: 40px; }
   .about a {
     color: #5B707D; }
@@ -107,21 +79,17 @@ a {
     color: #5B707D; }
   .about .btn {
     color: white;
-    background-color: #33BBA1;
+    background-color: #09A0F6;
     font-size: 16px;
-    font-weight: normal;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 6px 12px;
     border-radius: 4px;
-    display: inline-block;
-    line-height: 41px; }
+    display: inline-block; }
     .about .btn:hover {
       color: white;
-      background-color: rgba(51, 187, 161, 0.7); }
-    .about .btn .icon {
-      margin-left: 0; }
+      background-color: rgba(9, 160, 246, 0.7); }
     .about .btn .text {
-      margin-left: 15px; }
+      margin-left: 12px; }
 
 .projects {
   background-color: white;
@@ -136,7 +104,6 @@ a {
     color: rgba(91, 112, 125, 0.6);
     font-size: 18px;
     font-weight: normal;
-    text-align: center;
     margin-bottom: 40px; }
   .projects a {
     color: #5B707D; }
@@ -144,137 +111,91 @@ a {
     color: #5B707D; }
   .projects .btn {
     color: white;
-    background-color: #33BBA1;
+    background-color: #09A0F6;
     font-size: 16px;
-    font-weight: normal;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 6px 12px;
     border-radius: 4px;
-    display: inline-block;
-    line-height: 41px; }
+    display: inline-block; }
     .projects .btn:hover {
       color: white;
-      background-color: rgba(51, 187, 161, 0.7); }
-    .projects .btn .icon {
-      margin-left: 0; }
+      background-color: rgba(9, 160, 246, 0.7); }
     .projects .btn .text {
-      margin-left: 15px; }
-  .projects .project-view {
-    background-color: #F7F7F7;
+      margin-left: 12px; }
+  .projects .project-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .projects .project {
+    display: flex;
+    flex: 1 1 25%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+    background-color: #F6F9FA;
     border-radius: 4px;
     padding: 20px;
-    margin-bottom: 20px;
-    height: 170px;
-    position: relative; }
-    .projects .project-view h1 {
-      font-size: 20px;
-      margin: 0 0 10px;
-      color: #5B707D;
-      text-align: left; }
-    .projects .project-view p {
-      font-size: 14px;
-      text-align: left;
-      color: #5B707D; }
-    .projects .project-view .btn {
-      color: white;
-      background-color: #01C26E;
-      font-size: 16px;
-      font-weight: normal;
-      text-decoration: none;
-      padding: 0 15px;
-      border-radius: 4px;
-      display: inline-block;
-      line-height: 41px; }
-      .projects .project-view .btn:hover {
-        color: white;
-        background-color: rgba(1, 194, 110, 0.7); }
-      .projects .project-view .btn .icon {
-        margin-left: 0; }
-      .projects .project-view .btn .text {
-        margin-left: 15px; }
-    .projects .project-view .btn {
-      margin-top: 10px;
-      font-size: 12px;
-      padding: 10px;
-      line-height: 1em;
-      position: absolute;
-      bottom: 20px;
-      right: 20px; }
-  .projects .more-projects-view {
-    border-radius: 4px;
-    background-color: #F9F9F9;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 170px;
-    position: relative; }
-    .projects .more-projects-view h1 {
-      font-size: 20px;
-      margin: 0 0 10px;
-      color: #5B707D;
-      text-align: left; }
-    .projects .more-projects-view p {
-      font-size: 14px;
-      text-align: left;
-      color: #5B707D; }
-    .projects .more-projects-view .btn {
-      color: white;
-      background-color: #81A2BF;
-      font-size: 16px;
-      font-weight: normal;
-      text-decoration: none;
-      padding: 0 15px;
-      border-radius: 4px;
-      display: inline-block;
-      line-height: 41px; }
-      .projects .more-projects-view .btn:hover {
-        color: white;
-        background-color: rgba(129, 162, 191, 0.7); }
-      .projects .more-projects-view .btn .icon {
-        margin-left: 0; }
-      .projects .more-projects-view .btn .text {
-        margin-left: 15px; }
-    .projects .more-projects-view .btn {
-      margin-top: 10px;
-      font-size: 12px;
-      padding: 10px;
-      line-height: 1em;
-      position: absolute;
-      bottom: 20px;
-      right: 20px; }
-
-.skills {
-  background-color: #F9F9F9;
-  padding: 40px;
-  font-size: 18px;
-  color: #5B707D; }
-  .skills h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin: 0 0 20px; }
-  .skills p {
-    color: rgba(91, 112, 125, 0.6);
-    font-size: 18px;
-    font-weight: normal;
-    text-align: center;
-    margin-bottom: 40px; }
-  .skills a {
-    color: #5B707D; }
-  .skills .highlighted {
-    color: #5B707D; }
-  .skills .skill {
-    font-size: 40px;
+    position: relative;
     color: #5B707D;
-    text-align: center;
-    line-height: 60px; }
-    .skills .skill:active, .skills .skill:focus, .skills .skill:hover {
-      color: #33BBA1; }
+    text-align: left; }
+    .projects .project .btn {
+      color: white;
+      background-color: #09A0F6;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: inline-block; }
+      .projects .project .btn:hover {
+        color: white;
+        background-color: rgba(9, 160, 246, 0.7); }
+      .projects .project .btn .text {
+        margin-left: 12px; }
+    .projects .project .btn {
+      font-size: 12px; }
+    @media screen and (max-width: 600px) {
+      .projects .project {
+        flex: 100%; } }
+    .projects .project h1 {
+      font-size: 20px;
+      margin: 0 0 10px 0; }
+    .projects .project p {
+      font-size: 14px;
+      margin: 0 0 10px 0; }
+    .projects .project a.btn {
+      text-transform: uppercase; }
+    .projects .project .tag-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; }
+    .projects .project a.tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 6px 12px;
+      background-color: #e9f0f3;
+      margin: 0px 5px 5px 0px; }
+  .projects .github-ad .btn {
+    color: white;
+    background-color: #81A2BF;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block; }
+    .projects .github-ad .btn:hover {
+      color: white;
+      background-color: rgba(129, 162, 191, 0.7); }
+    .projects .github-ad .btn .text {
+      margin-left: 12px; }
+  .projects .github-ad .btn {
+    font-size: 12px; }
 
 .footer {
   background-color: white;
   padding: 40px;
   font-size: 18px;
-  color: #5B707D;
-  font-size: 20px; }
+  color: #5B707D; }
   .footer h1 {
     font-size: 24px;
     font-weight: normal;
@@ -283,7 +204,6 @@ a {
     color: rgba(91, 112, 125, 0.6);
     font-size: 18px;
     font-weight: normal;
-    text-align: center;
     margin-bottom: 40px; }
   .footer a {
     color: #5B707D; }
@@ -293,15 +213,13 @@ a {
     color: #F33363;
     padding: 5px; }
   .footer .fa-coffee {
-    color: #33BBA1;
+    color: #09A0F6;
     padding: 5px; }
-  .footer .highlighted {
-    font-weight: bold; }
 
 .tooltip-theme {
   border-radius: 5px;
   border: 0;
-  background: #33BBA1;
+  background: #09A0F6;
   color: #fff; }
   .tooltip-theme .tooltipster-content {
     font-family: 'Gotham Rounded', Arial, sans-serif;
@@ -349,3 +267,5 @@ a {
 .faa-pulse.animated.faa-slow {
   -webkit-animation: pulse 3s linear infinite;
   animation: pulse 3s linear infinite; }
+
+/*# sourceMappingURL=style.css.map */
