@@ -4,4 +4,7 @@ $(document).ready(function() {
     position: 'right',
     delay: 0
   });
+  
+  // Begin Highlighting pre code blocks
+  hljs.initHighlightingOnLoad();
 });
