@@ -24,6 +24,12 @@ $smallButtonFontSize: 12px;
     font-weight: bold;
     font-style: bold;
 }
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/Mark Simonson - Proxima Nova Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Media Queries */
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -156,10 +162,38 @@ a {
 /* Projects Section */
 .projects {
     @include section($darkGrey, white, $darkGrey);
+    @include btn(white,#82A2BE);
+    .btn {
+        margin-top: 40px;
+    }
     .project-wrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        .rpg-game {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/Game.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .studr {
+            background-color: #FF5959;
+        }
+        .life {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/Life.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .shared-space {
+            background-color: #4688F1;
+        }
+        .ramsay {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/AmazonAlexa.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .portfolio {
+            background-color: #FABC2D;
+        }
     }
     .project {
         display: flex;
@@ -171,7 +205,6 @@ a {
         justify-content: space-between;
         margin: 10px;
         padding: 10px;
-        background-color: $lightBlue;
         border-radius: 4px;
         overflow: hidden;
         position: relative;
@@ -182,33 +215,37 @@ a {
         h1 {
             font-size: 20px;
             margin: 5px;
+            color: white;
         }
         p {
             font-size: 14px;
             margin: 5px;
+            color: white;
+        }
+        a {
+            color: white;
         }
         .project-body {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            margin-bottom: 5px;
         }
         .project-footer {
-            text-transform: uppercase;
-            background-color: $blue;
-            color: white;
-            text-align: center;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: $smallButtonFontSize;
-            &:hover {
-                background-color: rgba($blue, 0.7);
-            }
-        }
-        .github {
-            background-color: $slate;
-            &:hover {
-                background-color: rgba($slate, 0.7);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            a {
+                text-transform: uppercase;
+                font-size: $smallButtonFontSize;
+                background-color: white;
+                color: black;
+                text-align: center;
+                padding: 6px 12px;
+                margin: 5px 5px 0 0;
+                border-radius: 4px;
+                &:hover {
+                    background-color: #f2f2f2;
+                }
             }
         }
     }
@@ -226,7 +263,8 @@ a {
     padding: 6px 12px;
     margin: 5px 5px 0 0;
     cursor: default;
-    background-color: darken($lightBlue, 4);
+    background-color: rgba(255,255,255,0.2);
+    color: white;
 }
 /* Footer Section */
 .footer {
