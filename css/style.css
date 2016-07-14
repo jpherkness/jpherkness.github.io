@@ -115,7 +115,7 @@ a {
 /* About Section */
 .about {
   background-color: #F6F9FA;
-  padding: 40px;
+  padding: 40px 20px;
   font-size: 18px;
   color: #5B707D;
   position: relative;
@@ -151,7 +151,7 @@ a {
 /* Projects Section */
 .projects {
   background-color: white;
-  padding: 40px;
+  padding: 40px 20px;
   font-size: 18px;
   color: #5B707D; }
   .projects h1 {
@@ -169,7 +169,7 @@ a {
     color: #5B707D; }
   .projects .btn {
     color: white;
-    background-color: #82A2BE;
+    background-color: #35495D;
     font-size: 16px;
     text-decoration: none;
     padding: 9px 15px;
@@ -178,7 +178,7 @@ a {
     -webkit-transition: all 100ms ease-in-out; }
     .projects .btn:hover {
       color: white;
-      background-color: rgba(130, 162, 190, 0.8); }
+      background-color: rgba(53, 73, 93, 0.8); }
     .projects .btn .text {
       margin-left: 12px; }
   .projects .btn {
@@ -204,17 +204,16 @@ a {
       background-size: cover;
       background-position: center; }
     .projects .project-wrapper .portfolio {
-      background-color: #FABC2D; }
+      background-color: #faca66; }
   .projects .project {
     display: flex;
-    flex: 1 1 25%;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1 1 25%;
     margin: 10px;
     padding: 10px;
     border-radius: 4px;
     overflow: hidden;
-    position: relative;
     text-align: left; }
     @media screen and (max-width: 600px) {
       .projects .project {
@@ -228,8 +227,6 @@ a {
     .projects .project p {
       font-size: 14px;
       margin: 5px;
-      color: white; }
-    .projects .project a {
       color: white; }
     .projects .project .project-body {
       display: flex;
@@ -270,7 +267,7 @@ a {
 /* Footer Section */
 .footer {
   background-color: white;
-  padding: 40px;
+  padding: 40px 20px;
   font-size: 18px;
   color: #5B707D; }
   .footer h1 {

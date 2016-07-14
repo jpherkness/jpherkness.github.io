@@ -58,7 +58,7 @@ a {
 /* Section */
 @mixin section($color, $backgroundColor, $highlightedColor) {
     background-color: $backgroundColor;
-    padding: 40px;
+    padding: 40px 20px;
     font-size: $sectionBodyFontSize;
     color: $color;
     h1 {
@@ -162,7 +162,7 @@ a {
 /* Projects Section */
 .projects {
     @include section($darkGrey, white, $darkGrey);
-    @include btn(white,#82A2BE);
+    @include btn(white,#35495D);
     .btn {
         margin-top: 40px;
     }
@@ -192,22 +192,21 @@ a {
             background-position: center;
         }
         .portfolio {
-            background-color: #FABC2D;
+            background-color: #faca66;
         }
     }
     .project {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         flex: 1 1 25%;
         @media screen and (max-width: 600px) {
             flex: 1 1 100%;
         }
-        flex-direction: column;
-        justify-content: space-between;
         margin: 10px;
         padding: 10px;
         border-radius: 4px;
         overflow: hidden;
-        position: relative;
         text-align: left;
         .text-wrapper {
             flex-grow: 1;
@@ -220,9 +219,6 @@ a {
         p {
             font-size: 14px;
             margin: 5px;
-            color: white;
-        }
-        a {
             color: white;
         }
         .project-body {
