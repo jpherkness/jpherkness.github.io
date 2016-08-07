@@ -1,0 +1,17 @@
+.button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 3px;
+  display: inline-block;
+  -webkit-transition: all 100ms ease-in-out;
+          transition: all 100ms ease-in-out;
+}
+.button:hover { background-color: rgba(0, 0, 0, 0.8); }
+.button__text { margin-left: 12px; }
+.button__icon { font-size: 16px; }
+
+.button--blue { background-color: #2099F6; }
+.button--blue:hover { background-color: rgba(32,153,246, 0.8); }

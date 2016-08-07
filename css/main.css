@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Gotham-Black';
+  src: url("fonts/Gotham-Black.otf") format("truetype");
+  font-weight: bold;
+  font-style: bold; }
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url("fonts/Gotham-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: bold; }
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url("fonts/Gotham-Book.otf") format("truetype");
+  font-weight: bold;
+  font-style: bold; }
+
+body {
+  font-family: 'Gotham-Book', serif;
+}
+
+h1 {
+  font-family: 'Gotham-Bold', serif;
+}

@@ -1,16 +1,7 @@
-/* Colors */
-$blue: #1A9CFB;
-$lightBlue: #F6F9FA;
-$darkGrey: #5B707D;
-$slate: #81A2BF;
-$red: #F33363;
-$tagColor: #EEF3F5;
-$gradient: linear-gradient(-45deg, #0059BB , #09A0F6);
-$headerFontSize: 40px;
-$sectionHeaderFontSize: 24px;
-$sectionBodyFontSize: 18px;
-$normalButtonFontSize: 16px;
-$smallButtonFontSize: 12px;
+/* Variables */
+$blue: #35A7FF;
+$imageBackgroundGradient: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+$borderRadius: 4px;
 /* Fonts */
 @font-face {
     font-family: 'Gotham Rounded';
@@ -25,10 +16,22 @@ $smallButtonFontSize: 12px;
     font-style: bold;
 }
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('fonts/Mark Simonson - Proxima Nova Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Gotham-Black';
+    src: url('fonts/Gotham-Black.otf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('fonts/Gotham-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('fonts/Gotham-Book.otf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
 }
 /* Media Queries */
 $tablet-width: 768px;
@@ -44,13 +47,16 @@ $desktop-width: 1024px;
     }
 }
 /* Default Element Styles */
-body,
 html {
-    font-family: 'Gotham Rounded', sans-serif;
-    font-weight: normal;
-    line-height: 1.4;
-    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    overflow: auto;
+    font-family: 'Gotham-Book', sans-serif;
     margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -58,36 +64,30 @@ a {
 /* Section */
 @mixin section($color, $backgroundColor, $highlightedColor) {
     background-color: $backgroundColor;
-    padding: 40px 20px;
-    font-size: $sectionBodyFontSize;
     color: $color;
     h1 {
-        font-size: $sectionHeaderFontSize;
         font-weight: normal;
         margin: 0 0 20px;
+        color: $highlightedColor;
     }
     p {
-        color: rgba($color, 0.60);
-        font-size: $sectionBodyFontSize;
+        color: rgba($color, 0.90);
         font-weight: normal;
         margin-bottom: 40px;
-    }
-    a {
-        color: $highlightedColor;
     }
     .highlighted {
         color: $highlightedColor;
     }
 }
 /* Button */
-@mixin btn($textColor, $backgroundColor) {
-    .btn {
+@mixin button($textColor, $backgroundColor) {
+    .button {
         color: $textColor;
         background-color: $backgroundColor;
         font-size: 16px;
         text-decoration: none;
         padding: 9px 15px;
-        border-radius: 4px;
+        border-radius: $borderRadius;
         display: inline-block;
         -webkit-transition: all 100ms ease-in-out;
         &:hover {
@@ -99,100 +99,85 @@ a {
         }
     }
 }
-.navbar {
-    @include btn($blue,rgba(white, 0.4));
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    .navbar-right {
-        float: right;
-        padding: 10px;
-    }
-    .navbar-left {
-        float: left;
-    }
-    .icon {
-        text-decoration: none;
-        font-size: 26px;
-        color: white;
-        padding: 10px;
-    }
-}
 /* Header Section */
-.header {
+.main-wrapper {
+    @include button(white,$blue);
+    @include section(#12202B, white, $blue);
+    background: white;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    @include btn($blue,white);
-    /* fallback for old browsers */
-    background: #00c6ff;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to left, #00c6ff , #0072ff);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to left, #00c6ff , #0072ff);
-    height: 50vh; //calc(50vh - 275px / 2 + 275px);
-    h1 {
-        font-size: $headerFontSize;
-        font-weight: normal;
-        margin: 5px;
+    flex-direction: row;
+    overflow-y: hidden;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    justify-content: flex-start;
+    align-content: stretch;
+    .decoration {
+        flex: 0 0 20px;
+        background-color: $blue;
+    }
+    .about-wrapper {
+        flex: 0 0 260px;
+        min-height: calc(100% - 80px);
+        @media screen and (max-width: 800px) {
+            width: calc(100% - 80px);
+        }
+        width: 400px;
+        padding: 40px;
+        background-color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .top {
+            flex-grow: 1;
+        }
+        .bottom {
+            flex-grow: 0;
+        }
     }
     .social-wrapper {
-        @media screen and (max-width: 600px) {
-            bottom: 30px;
-        }
-        @include btn($blue,white);
-        .btn {
-            .text {
-                @media screen and (max-width: 600px) {
-                    display: none;
-                }
-            }
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: stretch;
+        .button {
+            flex: 1 1 auto;
         }
     }
-}
-/* About Section */
-.about {
-    @include section($darkGrey, $lightBlue, $darkGrey);
-    @include btn(white,$blue);
-    position: relative;
-    z-index: 100;
-}
-/* Projects Section */
-.projects {
-    @include section($darkGrey, white, $darkGrey);
-    @include btn(white,#35495D);
-    .btn {
-        margin-top: 40px;
+    .seperator {
+        flex: 0 0 1px;
+        background-color: #EBECED;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    h1,
+    h2 {
+        color: $blue;
+        font-family: 'Gotham Rounded', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
     }
     .project-wrapper {
+        padding: 30px 40px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        .rpg-game {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/Game.png");
-            background-size: cover;
-            background-position: center;
-        }
-        .studr {
-            background-color: #FF5959;
-        }
-        .life {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/Life.png");
-            background-size: cover;
-            background-position: center;
-        }
-        .shared-space {
-            background-color: #4688F1;
-        }
-        .ramsay {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/AmazonAlexa.png");
-            background-size: cover;
-            background-position: center;
-        }
-        .portfolio {
-            background-color: #faca66;
+        overflow-y: scroll;
+        padding-bottom: 30px;
+        @media screen and (max-width: 800px) {
+            overflow-y: visible;
         }
     }
     .project {
@@ -200,26 +185,29 @@ a {
         flex-direction: column;
         justify-content: space-between;
         flex: 1 1 25%;
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 950px) {
             flex: 1 1 100%;
         }
-        margin: 10px;
+        @media screen and (max-width: 1100px) {
+            flex: 1 1 40%;
+        }
+        margin: 5px;
         padding: 10px;
-        border-radius: 4px;
+        border-radius: $borderRadius;
         overflow: hidden;
         text-align: left;
         .text-wrapper {
             flex-grow: 1;
         }
         h1 {
-            font-size: 20px;
+            font-size: 1.2em;
             margin: 5px;
             color: white;
         }
         p {
-            font-size: 14px;
+            font-size: 1em;
             margin: 5px;
-            color: white;
+            color: rgba(white, 0.8);
         }
         .project-body {
             display: flex;
@@ -227,137 +215,68 @@ a {
             flex-grow: 1;
         }
         .project-footer {
+            font-size: 0.75em;
+            text-align: center;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             a {
                 text-transform: uppercase;
-                font-size: $smallButtonFontSize;
                 background-color: white;
                 color: black;
                 text-align: center;
                 padding: 6px 12px;
                 margin: 5px 5px 0 0;
-                border-radius: 4px;
+                border-radius: $borderRadius;
                 &:hover {
-                    background-color: #f2f2f2;
+                    background-color: rgba(255,255,255,0.8);
                 }
             }
         }
     }
+    .project--game-engine {
+        background: $imageBackgroundGradient, url("../assets/Game.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .project--studr {
+        background: $imageBackgroundGradient, url("../assets/Studr.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .project--life {
+        background: $imageBackgroundGradient, url("../assets/Life.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .project--shared-space {
+        background-color: #52489C;
+    }
+    .project--ramsay {
+        background: $imageBackgroundGradient, url("../assets/AmazonAlexa.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .project--portfolio {
+        background-color: $blue;
+    }
+    .project--python-course {
+        background-color: #FE4365;
+    }
 }
 /* Tags */
 .tag-wrapper {
+    font-size: 0.75em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 .tag {
-    font-size: $smallButtonFontSize;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: $borderRadius;
     padding: 6px 12px;
     margin: 5px 5px 0 0;
     cursor: default;
     background-color: rgba(255,255,255,0.2);
     color: white;
-}
-/* Footer Section */
-.footer {
-    @include section($darkGrey, white, $darkGrey);
-    .fa-heart {
-        color: $red;
-        padding: 5px;
-    }
-    .fa-coffee {
-        color: $blue;
-        padding: 5px;
-    }
-}
-/* Tooltip Theme */
-.tooltip-theme {
-    border-radius: 5px;
-    border: 0;
-    background: $blue;
-    color: #fff;
-    .tooltipster-content {
-        font-family: 'Gotham Rounded', Arial, sans-serif;
-        font-size: 14px;
-        line-height: 18px;
-        padding: 8px 10px;
-    }
-}
-/* Window */
-.window {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    background-color: #0F2230; //48d8a0;
-    font-size: 16px;
-    text-align: left;
-    width: 400px;
-    @media screen and (max-width: 480px) {
-        width: 80vw;
-        height: 70%;
-    }
-    height: 270px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05), 0 2px 12px 0 rgba(0, 0, 0, .1);
-    pre {
-        margin: 1em;
-    }
-    .code-wrapper {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    code {
-        background-color: transparent;
-    }
-}
-.titlebar {
-    padding: 0 4px;
-    background-color: #0F2230;
-    &:after {
-        clear: both;
-        content: "";
-        display: block;
-    }
-}
-.titlebar-close,
-.titlebar-maximize,
-.titlebar-minimize {
-    float: left;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 6px 4px;
-}
-.titlebar-close {
-    border: 1px solid #e2463f;
-    background-color: #ff5f57;
-    margin-left: 6px;
-    &:active {
-        border-color: #ad3934;
-        background-color: #bf4943;
-    }
-}
-.titlebar-minimize {
-    border: 1px solid #e1a116;
-    background-color: #ffbd2e;
-    &:active {
-        border-color: #ad7d15;
-        background-color: #bf9123;
-    }
-}
-.titlebar-maximize {
-    border: 1px solid #12ac28;
-    background-color: #28c940;
-    &:active {
-        border-color: #128622;
-        background-color: #1f9a31;
-    }
 }
