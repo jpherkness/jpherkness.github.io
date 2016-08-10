@@ -1,7 +1,7 @@
 /* Variables */
 $blue: #35A7FF;
 $imageBackgroundGradient: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-$borderRadius: 4px;
+$borderRadius: 3px;
 /* Fonts */
 @font-face {
     font-family: 'Gotham Rounded';
@@ -61,97 +61,37 @@ body {
 a {
     text-decoration: none;
 }
-/* Section */
-@mixin section($color, $backgroundColor, $highlightedColor) {
-    background-color: $backgroundColor;
-    color: $color;
-    h1 {
-        font-weight: normal;
-        margin: 0 0 20px;
-        color: $highlightedColor;
-    }
-    p {
-        color: rgba($color, 0.90);
-        font-weight: normal;
-        margin-bottom: 40px;
-    }
-    .highlighted {
-        color: $highlightedColor;
-    }
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 /* Button */
-@mixin button($textColor, $backgroundColor) {
-    .button {
-        color: $textColor;
-        background-color: $backgroundColor;
-        font-size: 16px;
-        text-decoration: none;
-        padding: 9px 15px;
-        border-radius: $borderRadius;
-        display: inline-block;
-        -webkit-transition: all 100ms ease-in-out;
-        &:hover {
-            color: $textColor;
-            background-color: rgba($backgroundColor, 0.8);
-        }
-        .text {
-            margin-left: 12px;
-        }
+.button {
+    color: white;
+    background-color: $blue;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: $borderRadius;
+    display: inline-block;
+    -webkit-transition: all 100ms ease-in-out;
+    &:hover {
+        background-color: rgba($blue, 0.8);
+    }
+    .text {
+        margin-left: 12px;
     }
 }
-/* Header Section */
+/* Main Wrapper */
 .main-wrapper {
-    @include button(white,$blue);
-    @include section(#12202B, white, $blue);
     background: white;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
+    align-items: stretch;
     @media screen and (max-width: 800px) {
         flex-direction: column;
         overflow-y: scroll;
-    }
-    justify-content: flex-start;
-    align-content: stretch;
-    .decoration {
-        flex: 0 0 20px;
-        background-color: $blue;
-    }
-    .about-wrapper {
-        flex: 0 0 260px;
-        min-height: calc(100% - 80px);
-        @media screen and (max-width: 800px) {
-            width: calc(100% - 80px);
-        }
-        width: 400px;
-        padding: 40px;
-        background-color: white;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        .top {
-            flex-grow: 1;
-        }
-        .bottom {
-            flex-grow: 0;
-        }
-    }
-    .social-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-content: stretch;
-        .button {
-            flex: 1 1 auto;
-        }
-    }
-    .seperator {
-        flex: 0 0 1px;
-        background-color: #EBECED;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
     h1,
     h2 {
@@ -162,6 +102,7 @@ a {
     }
     h1 {
         font-size: 2em;
+        margin: 0;
     }
     h2 {
         font-size: 1.5em;
@@ -169,99 +110,156 @@ a {
     p {
         font-size: 1em;
     }
+}
+h1 {
+    color: $blue;
+    font-family: 'Gotham Rounded', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+h2 {
+    font-size: 1.5em;
+}
+.main-wrapper__decoration {
+    flex: 0 0 20px;
+    background-color: $blue;
+}
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 340px;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: white;
+    text-align: left;
+}
+.about-wrapper__top {
+    flex: 1 1 auto;
+}
+.about-wrapper__bottom {
+    flex: 0 0 auto;
+}
+.social-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+}
+.social-wrapper * {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+.social-wrapper:last-child {
+    margin: 0;
+}
+.main-wrapper__seperator {
+    flex: 0 0 1px;
+    background-color: #EBECED;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Projects */
+.project-wrapper {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: $borderRadius;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    .text-wrapper {
+        flex-grow: 1;
+    }
+    h1 {
+        font-size: 1.2em;
+        margin: 5px;
+        color: white;
+    }
+    p {
+        font-size: 1em;
+        margin: 5px;
+        color: rgba(white, 0.8);
+    }
+}
+.project__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.project__footer {
+    font-size: 0.75em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.project__button {
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 6px 12px;
+    margin: 5px 5px 0 0;
+    border-radius: $borderRadius;
+}
+.project__button:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+.project--game-engine {
+    background-image: $imageBackgroundGradient, url("../assets/Game.png");
+}
+.project--studr {
+    background-image: $imageBackgroundGradient, url("../assets/Studr.jpg");
+}
+.project--life {
+    background-image: $imageBackgroundGradient, url("../assets/Life.png");
+}
+.project--shared-space {
+    background-color: #52489C;
+}
+.project--ramsay {
+    background-image: $imageBackgroundGradient, url("../assets/AmazonAlexa.png");
+}
+.project--portfolio {
+    background-color: $blue;
+}
+.project--python-course {
+    background-color: #FE4365;
+}
+.project--pong {
+    background-color: #FDBF5C;
+}
+@media screen and (max-width: 900px) {
     .project-wrapper {
-        padding: 30px 40px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        overflow-y: scroll;
-        padding-bottom: 30px;
-        @media screen and (max-width: 800px) {
-            overflow-y: visible;
-        }
+        overflow-y: visible;
+        padding: 5px;
     }
     .project {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 25%;
-        @media screen and (max-width: 950px) {
-            flex: 1 1 100%;
-        }
-        @media screen and (max-width: 1100px) {
-            flex: 1 1 40%;
-        }
-        margin: 5px;
-        padding: 10px;
-        border-radius: $borderRadius;
-        overflow: hidden;
-        text-align: left;
-        .text-wrapper {
-            flex-grow: 1;
-        }
-        h1 {
-            font-size: 1.2em;
-            margin: 5px;
-            color: white;
-        }
-        p {
-            font-size: 1em;
-            margin: 5px;
-            color: rgba(white, 0.8);
-        }
-        .project-body {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        .project-footer {
-            font-size: 0.75em;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            a {
-                text-transform: uppercase;
-                background-color: white;
-                color: black;
-                text-align: center;
-                padding: 6px 12px;
-                margin: 5px 5px 0 0;
-                border-radius: $borderRadius;
-                &:hover {
-                    background-color: rgba(255,255,255,0.8);
-                }
-            }
-        }
+        flex: 1 1 100%;
     }
-    .project--game-engine {
-        background: $imageBackgroundGradient, url("../assets/Game.png");
-        background-size: cover;
-        background-position: center;
+    .project .text-wrapper {
+        font-size: 1.2em;
     }
-    .project--studr {
-        background: $imageBackgroundGradient, url("../assets/Studr.jpg");
-        background-size: cover;
-        background-position: center;
+    .tag {
+        font-size: 1.4em;
     }
-    .project--life {
-        background: $imageBackgroundGradient, url("../assets/Life.png");
-        background-size: cover;
-        background-position: center;
-    }
-    .project--shared-space {
-        background-color: #52489C;
-    }
-    .project--ramsay {
-        background: $imageBackgroundGradient, url("../assets/AmazonAlexa.png");
-        background-size: cover;
-        background-position: center;
-    }
-    .project--portfolio {
-        background-color: $blue;
-    }
-    .project--python-course {
-        background-color: #FE4365;
+    .project__footer a {
+        font-size: 1.4em;
     }
 }
 /* Tags */
