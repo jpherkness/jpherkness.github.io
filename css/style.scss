@@ -253,12 +253,8 @@ p {
             overflow-y: visible;
         }
     }
-    .project-wrapper {
-        padding-right: 0;
-        padding-left: 0;
-    }
     .project {
-        width: calc(100%);
+        width: calc(100% - 40px);
     }
     .sidebar-wrapper {
         height: auto;
