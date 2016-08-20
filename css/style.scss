@@ -150,6 +150,7 @@ p {
 .content-wrapper {
     flex: 1 1 auto;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     .about {
         font-family: 'Apercu', sans-serif;
         padding: 20px;

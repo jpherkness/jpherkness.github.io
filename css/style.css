@@ -112,7 +112,8 @@ p {
 
 .content-wrapper {
   flex: 1 1 auto;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
   .content-wrapper .about {
     font-family: 'Apercu', sans-serif;
     padding: 20px;
@@ -208,5 +209,3 @@ p {
   .sidebar-wrapper {
     height: auto;
     text-align: left; } }
-
-/*# sourceMappingURL=style.css.map */
