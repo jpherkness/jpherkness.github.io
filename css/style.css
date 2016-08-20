@@ -1,30 +1,30 @@
 @font-face {
-  font-family: 'Gotham Rounded';
+  font-family: "Gotham Rounded";
   src: url("fonts/Gotham-Rounded-Normal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'Gotham Rounded';
+  font-family: "Gotham Rounded";
   src: url("fonts/Gotham-Rounded-Medium.ttf") format("truetype");
   font-weight: bold;
   font-style: bold; }
 @font-face {
-  font-family: 'Gotham-Black';
+  font-family: "Gotham-Black";
   src: url("fonts/Gotham-Black.otf") format("truetype");
   font-weight: bold;
   font-style: bold; }
 @font-face {
-  font-family: 'Gotham-Bold';
+  font-family: "Gotham-Bold";
   src: url("fonts/Gotham-Bold.otf") format("truetype");
   font-weight: bold;
   font-style: bold; }
 @font-face {
-  font-family: 'Gotham-Book';
+  font-family: "Gotham-Book";
   src: url("fonts/Gotham-Book.otf") format("truetype");
   font-weight: bold;
   font-style: bold; }
 @font-face {
-  font-family: 'Apercu';
+  font-family: "Apercu";
   src: url("fonts/apercu-mono-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
@@ -35,7 +35,7 @@ html {
 body {
   height: 100%;
   overflow: auto;
-  font-family: 'Gotham-Book', sans-serif;
+  font-family: "Gotham-Book", sans-serif;
   margin: 0; }
 
 a {
@@ -54,20 +54,6 @@ p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
-.button {
-  color: #F8CE2F;
-  background-color: black;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 9px 15px;
-  border-radius: 5px;
-  display: inline-block;
-  -webkit-transition: all 100ms ease-in-out; }
-  .button:hover {
-    background-color: rgba(0, 0, 0, 0.8); }
-  .button .text {
-    margin-left: 12px; }
-
 .main-container {
   display: flex;
   align-items: stretch;
@@ -84,7 +70,7 @@ p {
   padding: 20px;
   text-align: right;
   background: white;
-  font-family: 'Apercu', sans-serif; }
+  font-family: "Apercu", sans-serif; }
   .sidebar-wrapper .header {
     width: 100%;
     flex-grow: 0;
@@ -115,7 +101,7 @@ p {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
   .content-wrapper .about {
-    font-family: 'Apercu', sans-serif;
+    font-family: "Apercu", sans-serif;
     padding: 20px;
     color: white;
     background-color: #F4D460;
