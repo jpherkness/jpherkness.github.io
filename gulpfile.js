@@ -28,7 +28,8 @@ gulp.task('watch', () => {
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {baseDir: "./"},
-        notify: false
+        notify: false,
+        browser: "google chrome"
     });
     gulp.watch("./img/**/*",     ['reload']);
     gulp.watch("./css/**/*.css", ['reload']);
