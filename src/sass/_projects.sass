@@ -7,8 +7,8 @@
   width: 100%
 
 .project
+  opacity: 0
   display: flex
-  visibility: hidden
   flex-direction: column
   width: calc(25% - 15px)
   margin-bottom: 20px
@@ -55,3 +55,17 @@
 @media screen and (max-width: 620px)
   .project
     width: 100%
+
+
+@keyframes tada
+  from
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+  to
+    opacity: 1
+    transform: none
+
+.tada
+  animation-name: tada
+  animation-duration: 1s
+  animation-fill-mode: both
