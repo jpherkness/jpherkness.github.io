@@ -1,11 +1,9 @@
 $(document).ready(function() {
-
   // Initializes the project grid
-  $('.project-wrapper').masonry({
+  $('.projects').masonry({
     itemSelector: '.project',
     columnWidth: '.project',
     percentPosition: true,
     gutter: 20
   })
-
 });

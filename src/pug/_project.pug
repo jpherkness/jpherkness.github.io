@@ -1,0 +1,13 @@
+// Defines the html structure of a project element
+mixin project(title, date, description, url ,image, ...tags)
+  a.project(href=url)
+    .project__body
+      if image
+        .image(style='background-image: url(' + image +')')
+      .text-wrapper
+        h1.title= title
+        p.date= date
+        p.description= description
+      .tag-wrapper
+        each tag in tags
+          .tag= tag

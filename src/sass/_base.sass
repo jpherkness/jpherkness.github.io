@@ -1,0 +1,104 @@
+// - - - - - - - - - - - - Variables - - - - - - - - - - - -//
+
+$blue: #199CDC
+$borderRadius: 5px
+
+// - - - - - - - - - - - - Media Queries - - - - - - - - - - - -//
+
+$tablet-width: 768px
+$desktop-width: 1024px
+@mixin tablet
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px)
+    @content
+
+@mixin desktop
+  @media (min-width: $desktop-width)
+  @content
+
+// - - - - - - - - - - - - Global Styles - - - - - - - - - - - -//
+
+html
+  height: 100%
+  overflow: hidden
+
+body
+  height: 100%
+  overflow: auto
+  font-family: 'Gotham-Book', sans-serif
+  margin: 0
+
+a
+  text-decoration: none
+
+h1,
+h2,
+p
+  color: #40495F
+  font-size: 1em
+  margin: 0
+  font-weight: normal
+
+*
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+// - - - - - - - - - - - - Main Styles - - - - - - - - - - - -//
+
+.main-wrapper
+  display: flex
+  align-items: stretch
+  width: 100%
+  height: 100vh
+
+
+// - - - - - - - - - - - - Main Content Styles - - - - - - - - - - - -//
+.content
+  flex: 1 1 auto
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+
+// - - - - - - - - - - - - Tag Styles - - - - - - - - - - - -//
+.tag-wrapper
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+
+.tag
+  background-color: #EFF1F4
+  color: rgba(#40495F, 0.6)
+  font-size: 0.78em
+  text-transform: uppercase
+  padding: 6px 12px
+  margin: 5px 5px 0 0
+
+// - - - - - - - - - - - - Media Queries - - - - - - - - - - - -//
+@media screen and (max-width: 1020px)
+  .project
+    width: calc(33.333% - 26.6666px)
+
+@media screen and (max-width: 820px)
+  .project
+    width: calc(50% - 30px)
+
+@media screen and (max-width: 620px)
+  body
+    font-size: 1.3em
+
+  .title
+    font-size: 1.3em
+
+  .main-container
+    display: block
+    .sidebar-wrapper
+      height: auto
+
+    .content
+      overflow-y: visible
+
+  .project
+    width: calc(100% - 40px)
+
+  .sidebar-wrapper
+    height: auto
+    text-align: left

@@ -1,0 +1,43 @@
+// - - - - - - - - - - - - Project Styles - - - - - - - - - - - -//
+.projects
+  flex: 1 1 auto
+  flex-wrap: wrap
+  padding: 20px 20px 0
+  background: #F0F3F7
+
+.project
+  display: flex
+  flex-direction: column
+  width: calc(25% - 25px)
+  margin-bottom: 20px
+  padding: 10px
+  overflow: hidden
+  background-color: white
+  &:hover
+    background-color: #fafaf9
+
+  .text-wrapper
+    flex-grow: 1
+
+  .image
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    height: 160px
+    margin: -10px -10px 10px
+
+  .title
+    margin: 5px
+    color: #40495F
+    text-align: center
+    font-size: 1em
+
+  .date
+    text-align: center
+    padding: 0 0 10px
+    margin: 5px
+    color: rgba(#40495F, 0.6)
+
+  .description
+    margin: 5px
+    color: rgba(#40495F, 0.6)
