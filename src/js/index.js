@@ -10,10 +10,11 @@ jQuery(window).on('load', function(){
   });
 
   // Fade in the projects
-  $('.project').removeClass('tada');
   $('.project').each(function(i){
+    var project = $('.project').eq(i)
+    project.removeClass('tada');
     setTimeout(function () {
-      $('.project').eq(i).addClass('tada');
+      project.addClass('tada');
     }, 200 * i);
   });
 });
