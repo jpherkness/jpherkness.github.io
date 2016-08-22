@@ -5,43 +5,50 @@
 
 .projects-grid
   width: 100%
+  overflow: hidden
 
-.project
-  opacity: 0
+.project-card
+  // Animation
+  &:not(.is-visible)
+    transform: translateY(600px)
+    opacity: 0
+  &.is-visible
+    opacity: 1
+    transform: translateY(0)
+  // Layout
   display: flex
   flex-direction: column
-  width: calc(25% - 15px)
   margin-bottom: 20px
-  padding: 10px
+  width: calc(25% - 15px)
+  // Appearance
   background-color: white
   &:hover
     background-color: #fafaf9
 
-  .text-wrapper
-    flex-grow: 1
+.project-body
+  padding: 10px
 
-  .image
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-    height: 160px
-    margin: -10px -10px 10px
+.project-image
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  height: 160px
 
-  .title
-    margin: 5px
-    color: #40495F
-    text-align: center
-    font-size: 1em
+.project-title
+  margin: 5px
+  color: #40495F
+  text-align: center
+  font-size: 1em
 
-  .date
-    text-align: center
-    padding: 0 0 10px
-    margin: 5px
-    color: rgba(#40495F, 0.6)
+.project-date
+  text-align: center
+  padding: 0 0 10px
+  margin: 5px
+  color: rgba(#40495F, 0.6)
 
-  .description
-    margin: 5px
-    color: rgba(#40495F, 0.6)
+.project-description
+  margin: 5px
+  color: rgba(#40495F, 0.6)
 
 
 @media screen and (max-width: 1020px)
@@ -55,17 +62,3 @@
 @media screen and (max-width: 620px)
   .project
     width: 100%
-
-
-@keyframes tada
-  from
-    opacity: 0
-    transform: translate3d(0, 100%, 0)
-  to
-    opacity: 1
-    transform: none
-
-.tada
-  animation-name: tada
-  animation-duration: 1s
-  animation-fill-mode: both

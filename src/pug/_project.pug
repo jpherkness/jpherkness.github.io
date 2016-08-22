@@ -1,13 +1,12 @@
 // Defines the html structure of a project element
 mixin project(title, date, description, url ,image, ...tags)
-  a.project(href=url)
-    .project__body
-      if image
-        .image(style='background-image: url(' + image +')')
-      .text-wrapper
-        h1.title= title
-        p.date= date
-        p.description= description
+  a.project-card(href=url)
+    if image
+      .project-image(style='background-image: url(' + image +')')
+    .project-body
+      .project-title= title
+      .project-date= date
+      .project-description= description
       .tag-wrapper
         each tag in tags
           .tag= tag

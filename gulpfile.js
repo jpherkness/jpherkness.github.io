@@ -4,9 +4,7 @@ var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var sourcemaps = require("gulp-sourcemaps");
 var autoprefixer = require("gulp-autoprefixer");
-var plumber = require("gulp-plumber");
 var browserSync = require("browser-sync");
-var notify = require("gulp-notify");
 var pug = require("gulp-pug");
 
 gulp.task('default', ['sass', 'js', 'browser-sync', 'pug', 'watch']);
@@ -55,9 +53,6 @@ gulp.task('js', () => {
 */
 gulp.task("sass", () => {
   return sass("./src/sass/**/*.sass")
-  .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
-  }))
   .pipe(sourcemaps.init())
   .pipe(autoprefixer())
   .pipe(sourcemaps.write())
@@ -77,9 +72,6 @@ gulp.task("pug", () => {
     pretty: true
   }
   gulp.src("./src/pug/**/!(_)*.pug")
-  .pipe(plumber({
-    errorHandler: notify.onError("Error: <%= error.message %>")
-  }))
   .pipe(pug(option))
   .pipe(gulp.dest("./"))
 });
