@@ -13,7 +13,7 @@ function loadProjectGrid(){
   });
 
   // wait one second, then animate the projects
-  setTimeout(function () {
+  setTimeout(function() {
     $('.project-card').css('transition', 'all 750ms ease-out');
     $('.project-card').each(function(i){
       var project = $('.project-card').eq(i)
