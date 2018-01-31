@@ -1,13 +1,13 @@
 mixin project(title, date, description, url ,imageUrl, tags)
   -var n = title.toLowerCase().split(' ').join('-');
-  a.project-card(href=url, class='project-card--'+n)
-    if imageUrl
-      .project__image(style='background-image: url(' + imageUrl +')')
-    .project__body
-      .project__title= title
-      .project__date= date
-      .project__description= description
-      .project__tags.tag-wrapper
-        each tag in tags
-          -var s = tag.toLowerCase().split(' ').join('-');
-          .tag(class='tag--'+s)= tag
+    a.project-card(href=url, class='project-card--'+n)
+      //if imageUrl
+        //.project__image(style='background-image: url(' + imageUrl +')')
+      .project__body
+        .project__title= title
+        .project__date= date
+        .project__description= description
+        .project__tags.tag-wrapper
+          each tag in tags
+            -var s = tag.toLowerCase().split(' ').join('-');
+            .tag-custom(class='tag-custom--'+s)= tag

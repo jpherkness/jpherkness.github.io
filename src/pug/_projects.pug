@@ -2,63 +2,72 @@ include _project.pug
 
 section.projects
   .projects-grid
-
+    +project('Destination Delicious',
+             'Jan-Jun. 2017',
+             'An iOS application used to locate nearby food trucks.',
+             'https://github.com/kdjohnson/destinationDelicious',
+             '',
+             ['react native', 'javascript', 'mysql', 'ios', 'android'])
+    +project('ETA Detroit iOS Application',
+             'Jan-Jun. 2017',
+             'An iOS application designed to provide access to safe, efficient, reliable transit for all Detroit residents.',
+             'https://itunes.apple.com/us/app/eta-detroit/id1206979871?mt=8',
+             './img/ETA.jpg',
+             ['hackathon', 'swift'])
+    +project('Sokoban Solver',
+             'Jan-Jun. 2017',
+             'Q-Learning based implementation of a sokoban puzzel solver.',
+             'https://drive.google.com/open?id=0B_Mjzckcc-JfcjFxOEFZa3ZXQ3c',
+             '',
+             ['python', 'machine learning'])
     +project('Ticket Time',
              'Sept-Dec. 2016',
-             'Web application built to reserve movie tickets. Won best application in the class.',
+             'Web application built to reserve movie tickets. Recieved an award for the most impressive application.',
              'http://ticket-time.herokuapp.com/#/home/movies',
              'img/Ticket-Time.png',
              ['mysql', 'node.js', 'javascript', 'angular 2.0', 'socket.io', 'express'])
-
     +project('2D Game Engine',
              'Jun. 2016',
              'A 2D Game and Game Engine written in Java.',
              'https://github.com/jpherkness/Game',
              './img/Game.png',
              ['java'])
-
     +project('Studr',
              'Sep. 2015',
              'An iOS application created in 36 hours during MHacks VI with the purpose of simplifying the act of creating, managing, and joining study groups.',
              'http://devpost.com/software/studr',
              'img/Studr.png',
              ['hackathon', 'ios', 'swift' ,'objective-c', 'parse', 'firebase'])
-
     +project('Life',
              'Jul. 2016',
              "A C++ implementation of Conway's Game of Life. I used this project to better understand the C++ lanuage.",
              'https://github.com/jpherkness/Life',
              'img/Life.png',
              ['c++', 'sfml'])
-
     +project('Shared Space',
              'Sep-Dec. 2016',
              'Local event aggregation Android application completed as my sophomore design project.',
              'https://github.com/jpherkness/SharedSpace',
              '',
              ['android', 'java', 'android studio', 'firebase', 'geofire', 'google maps api'])
-
     +project('Ramsay',
              'Feb. 2016',
              'Amazon Alexa voice activated kitchen assistant created in 18 hours during SpartaHack 2016.',
              'https://github.com/joshherkness/Ramsay',
              'img/AmazonAlexa.png',
              ['hackathon', 'javascript' ,'node.js', 'aws'])
-
     +project('Portfolio',
              'Nov. 2014',
              "My  website, which contains a list of projects that I've worked on.",
              'https://github.com/jpherkness/jpherkness.github.io',
              '',
              ['javascript', 'html', 'css', 'pug', 'sass', 'gulp'])
-
     +project('Advanced Python Course',
              'May. 2015',
              'Developed an advanced python course to teach to high school students.',
              'https://github.com/jpherkness/Oakland-University-Outreach/tree/master/Python',
              '',
              ['python'])
-
     +project('Java Pong Game',
              'Jun. 2016',
              'A Java implementation of the game Pong.',

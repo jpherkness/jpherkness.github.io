@@ -1,7 +1,7 @@
 // - - - - - - - - - - - - Project Styles - - - - - - - - - - - -//
 section.projects
   z-index: 1
-  background: #F0F3F7
+  background: #edf2f4
   padding: 20px 20px 0
 
 .projects-grid
@@ -35,15 +35,16 @@ section.projects
 .project__body
   padding: 10px
   .project__title
-    color: #40495F
+    font-weight: 600
+    color: #000000
     text-align: center
     font-size: 1em
   .project__date
     text-align: center
     padding: 10px 0
-    color: rgba(#40495F, 0.6)
+    color: rgba(#000000, 1)
   .project__description
-    color: rgba(#40495F, 0.6)
+    color: rgba(#000000, 1)
     line-height: 1.5
     text-indent: 20px
 
@@ -53,17 +54,17 @@ section.projects
   flex-wrap: wrap
   flex-direction: row
 
-.tag
+.tag-custom
   flex: 0 0 auto
-  background-color: #EFF1F4
-  color: rgba(#40495F, 0.6)
-  font-size: 0.78em
+  background-color: #edf2f4
+  color: black
+  font-size: 0.74rem
   text-transform: uppercase
-  padding: 6px 12px
+  padding: 3px 6px
   margin: 5px 5px 0 0
 
-.tag--hackathon
-  background-color: #F4DB8A
+.tag-custom--hackathon
+  background-color: $primary
   color: white
 
 @media screen and (max-width: 1020px)

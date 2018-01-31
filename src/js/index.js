@@ -20,6 +20,7 @@ function loadProjectGrid(){
       project.removeClass('is-visible');
       setTimeout(function () {
         project.addClass('is-visible');
+        project.css('transition', '');
       }, 200 * i);
     });
   }, 1);
