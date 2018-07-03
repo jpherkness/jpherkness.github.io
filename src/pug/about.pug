@@ -1,0 +1,52 @@
+block link
+  -var page = 'About';
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Joseph Herkness')
+    meta(name='keywords', content='Joseph,joseph,joey,Joey,Joey Herkness,Joseph Herkness,herkness,Herkness,iphone,iOS,Resume,resume,Information,Personal,skills,contact,programming,compiuter science,oakland university,clarkston,freelance,developer,software,oakland,student,skills,personal,website,josephherkness,jpherkness,michigan,')
+    title Joseph Herkness Portfolio
+    // link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css')
+    link(rel='stylesheet', href='css/style.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700')
+  body
+
+    div.main-container.home-container
+      include _nav.pug
+      section.home-about
+        .prof-img
+            img(src="img/profile_image.jpg" alt="")
+        .about-text-container
+            p.about-text 
+                | Hey there! I'm a software development engineer at 
+                a.homepage-link.amazon-link() Amazon
+                | on the Marketplace Abuse Prevention team. 
+            p.about-text
+                | Before starting at Amazon as a full time engineer, I was a mobile development intern at  
+                a.homepage-link.riis-link() Riis
+                | , where I developed a iOS application called 
+                a.homepage-link.eta-detroit-link(href='http://www.riis.com/blog/project/eta-detroit/') ETA Detroit
+                | . Before that, I was a software development engineer intern at 
+                a.homepage-link.logicdrop-link(href='https://logicdrop.com/') Logicdrop 
+                | , where I helped develop a rule based data intelligence platform.
+                
+            p.about-text
+                | While studying computer science at Oakland University, I helped develop a curriculum for the 
+                a.homepage-link.oakland-university-link() Outreach Program
+                | , and taught complex programming concepts.
+            p.about-text 
+                | If you'd like to see my resume, 
+                a.homepage-link(href='https://drive.google.com/open?id=0B_Mjzckcc-JfQ3ktYVlZUFJJeWM') click here.
+      include _footer.pug
+
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(src='js/masonry.pkgd.min.js')
+    script(src='js/index.js')
+    script(src='js/analytics.js')

@@ -1,0 +1,10 @@
+mixin card(class_name, title, subtitle, imageUrl, backgroundColor, iconUrl, link)
+  a.card(href=link, class='card-'+class_name)
+    if iconUrl || imageUrl || backgroundColor
+      div.card-image(style='background-color:' + backgroundColor)
+        if iconUrl
+          div.card-icon(style='background-image: url(' + iconUrl +')')
+        if imageUrl
+          img(src=imageUrl)
+    h2.title= title
+    h3.subtitle= subtitle

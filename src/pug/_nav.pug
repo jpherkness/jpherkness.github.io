@@ -1,0 +1,11 @@
+section.nav
+  .home-header
+    h1.title-name
+      a(href="/") Joseph Herkness
+    .title-links
+      - var items = { 'Home' : 'index.html', 'About': 'about.html'}
+      = selected
+      ul
+        each item, path in items
+          li(class= (path == page) && 'active')
+            a(href= "/" + item)=path

@@ -1,0 +1,184 @@
+.work-section 
+  animation: fadein .5s both
+  animation-delay: .3s
+  margin-top: 30px
+  padding-top: 30px
+
+
+.work-grid 
+  display: flex
+  flex-flow: row
+  margin-left: -20px
+  margin-right: -20px
+
+
+.card 
+  color: inherit
+  flex: 1
+  margin: 5px
+  padding: 15px
+  position: relative
+  text-decoration: none
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+  h2 
+    font-size: 16px
+    font-weight: 600
+    margin-left: 5px
+    -webkit-backface-visibility: hidden
+    -webkit-transform-style: preserve-3d
+  
+  h3 
+    color: rgba(58, 71, 80, 0.6)
+    font-size: 15px
+    font-weight: 500
+    margin-left: 5px
+    -webkit-backface-visibility: hidden
+    -webkit-transform-style: preserve-3d
+  
+  &:after 
+    background: rgba(143, 172, 192, 0.1)
+    content: ""
+    height: 100%
+    left: 0
+    opacity: 0
+    position: absolute
+    top: 0
+    transition: 100ms
+    width: 100%
+    z-index: -1
+    -webkit-transform: scale(0.9)
+    -moz-transform: scale(0.9)
+    -ms-transform: scale(0.9)
+    -o-transform: scale(0.9)
+    transform: scale(0.9)
+  
+  &:hover:after 
+    opacity: 1
+    -webkit-transform: scale(1)
+    -moz-transform: scale(1)
+    -ms-transform: scale(1)
+    -o-transform: scale(1)
+    transform: scale(1)
+  
+  &.empty-item:after 
+    content: none
+  
+
+
+.work-grid.small
+    .card-image
+        height: 120px
+
+.card-image 
+  background: rgba(143, 172, 192, 0.2)
+  border-radius: 2px
+  height: 170px
+  margin-bottom: 15px
+  overflow: hidden
+  position: relative
+  width: 100%
+
+  img 
+    height: 100%
+    width: 100%
+    object-fit: cover
+  
+  &:before 
+    background: 0 0
+    content: ""
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+  
+
+
+.card-icon 
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  height: 55px
+  left: 50%
+  position: absolute
+  top: 50%
+  width: 55px
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  -moz-transform: translateX(-50%) translateY(-50%)
+  -ms-transform: translateX(-50%) translateY(-50%)
+  -o-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+
+.card-riis
+    .card-image
+        .card-icon
+            width: 90px
+
+@media (max-width: 800px) 
+  body 
+    padding-left: 15px
+    padding-right: 15px
+  
+
+
+@media (max-width: 600px) 
+  .home-title 
+    margin-top: 40px
+    .title-name 
+      font-size: 28px
+    
+    .title-description 
+      font-size: 17px
+      margin-top: 30px
+      text-align: left
+    
+  
+  .work-section 
+    margin-top: 20px
+  
+  .card 
+    margin: 0 0 10px
+    width: 100%
+  
+
+
+@media (max-width: 450px) 
+  .work-grid 
+    flex-flow: row wrap
+    margin-left: -10px
+    margin-right: -10px
+  
+  .card 
+    flex: initial
+    padding: 10px
+  
+.card-riis .card-image:before
+    background: -moz-linear-gradient(-45deg, #2BC0FC 0, #2BC0FC 100%)
+    background: -webkit-linear-gradient(-45deg, #2BC0FC 0, #2BC0FC 100%)
+    background: linear-gradient(135deg, #2BC0FC 0, #2BC0FC 100%)
+    opacity: .7
+
+.card-amazon-internship .card-image:before
+    background: -moz-linear-gradient(-45deg, #FA5356 0, #ff9900 100%)
+    background: -webkit-linear-gradient(-45deg, #FA5356 0, #ff9900 100%)
+    background: linear-gradient(135deg, #146eb4 0, #146eb4 100%)
+    opacity: .7
+
+.card-brand-central .card-image:before
+    // background: -moz-linear-gradient(-45deg, #EC2741 0, #EC2741 100%)
+    // background: -webkit-linear-gradient(-45deg, #EC2741 0, #EC2741 100%)
+    // background: linear-gradient(135deg, #EC2741 0, #EC2741 100%)
+    // opacity: .7
+
+.card-eta-detroit .card-image .card-icon
+    border-radius: 8px
+    // -webkit-box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
+    // -moz-box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
+    // box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
+
+.card-eta-detroit .card-image:before
+    // background: -moz-linear-gradient(-45deg, #39BFA2 0, #39BFA2 100%)
+    // background: -webkit-linear-gradient(-45deg, #39BFA2 0, #39BFA2 100%)
+    // background: linear-gradient(135deg, #ffffff 0, #ffffff 100%)
+    // opacity: 0.7

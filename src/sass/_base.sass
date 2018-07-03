@@ -4,6 +4,7 @@ $blue: #41AAE2
 $red: #DD4B4E
 $yellow: #ffdd79
 $textColor: #5c5a47
+$family-primary: 'Open Sans', 'Lato', 'Montserrat', sans-serif
 
 // - - - - - - - - - - - - Media Queries - - - - - - - - - - - -//
 
@@ -21,12 +22,13 @@ $desktop-width: 1024px
 
 html
   height: 100%
-  overflow: hidden
 
 body
   height: 100%
-  //font-family: 'Gotham-Book', sans-serif
   margin: 0
+  color: rgb(58, 71, 80)
+  font-family: $family-primary
+  line-height: 1.5
 
 a
   text-decoration: none
@@ -34,13 +36,27 @@ a
 h1,
 h2,
 p
-  color: #40495F
   font-size: 1em
   margin: 0
   font-weight: normal
 
+h1
+  font-family: 'Roboto', 'Open Sans', 'Lato'
+  
+ul
+  padding-left: 0px
+
+::selection
+    background: #3A4750
+    color: #fff
+
+::-moz-selection
+    background: #3A4750
+    color: #fff
+
 *
   box-sizing: border-box
+  margin: 0px
 
 // - - - - - - - - - - - - Main Styles - - - - - - - - - - - -//
 
@@ -50,17 +66,70 @@ p
   width: 100%
   height: 100vh
 
-.lead
-  font-size: 1.5em
-  margin: 0
-  font-weight: normal
-  font-family: 'Apercu', sans-serif
+.home-container
+    max-width: 750px
+
+.main-container
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+.section-title
+    font-size: 20px
+    font-weight: 800
+    position: relative
+    margin-top: 60px
+    margin-bottom: 20px
+
+.homepage-link
+    color: #2185D5
+    display: inline-block
+    font-weight: 500
+    position: relative
+    text-decoration: none
+
+.homepage-link:before
+    background: rgba(33, 133, 213, .1)
+    content: ''
+    display: block
+    position: absolute
+    left: 5px
+    bottom: 2px
+    height: 12px
+    width: 0
+    -webkit-transition: width 0s ease, background .4s ease
+    transition: width 0s ease, background .4s ease
+
+.homepage-link:after
+    background: rgba(33, 133, 213, .1)
+    content: ''
+    display: block
+    position: absolute
+    right: -5px
+    bottom: 2px
+    height: 12px
+    width: 0
+    -webkit-transition: width .4s ease
+    transition: width .4s ease
+
+.homepage-link:hover:before
+    width: 100%
+    -webkit-transition: width .4s ease
+    transition: width .4s ease
+
+.homepage-link:hover:after
+    background: 0 0
+    width: 100%
+    -webkit-transition: all 0s ease
+    transition: all 0s ease
 
 // - - - - - - - - - - - - Main Content Styles - - - - - - - - - - - -//
+
 .content
   flex: 1 1 auto
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
+
 // - - - - - - - - - - - - Media Queries - - - - - - - - - - - -//
 
 @media screen and (max-width: 620px)
@@ -81,3 +150,22 @@ p
     text-align: left
   .lead
     font-size: 1em
+
+// - - - - - - - - - - - - Animations - - - - - - - - - - - -//
+@keyframes fadein
+  from
+    opacity: 0
+    transform: translateY(20px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.fade-in
+  animation: fadein .5s both
+  animation-delay: .1s
+  &.delay-1
+    animation-delay: .1s
+  &.delay-3
+    animation-delay: .3s
+  &.delay-5
+    animation-delay: .4s

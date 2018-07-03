@@ -7,182 +7,86 @@
     <meta name="author" content="Joseph Herkness">
     <meta name="keywords" content="Joseph,joseph,joey,Joey,Joey Herkness,Joseph Herkness,herkness,Herkness,iphone,iOS,Resume,resume,Information,Personal,skills,contact,programming,compiuter science,oakland university,clarkston,freelance,developer,software,oakland,student,skills,personal,website,josephherkness,jpherkness,michigan,">
     <title>Joseph Herkness Portfolio</title>
-    <!-- link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css')-->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   </head>
   <body>
-    <!-- include _sidebar.pug-->
-    <section class="landing hero is-fullheight partical-container" id="particles">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">Joseph Herkness</h1>
-          <h2 class="subtitle">Software Engineer </h2>
+    <div class="main-container home-container">
+      <section class="nav">
+        <div class="home-header">
+          <h1 class="title-name"><a href="/">Joseph Herkness</a></h1>
+          <div class="title-links">
+            <ul>
+              <li class="active"><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
         </div>
+      </section>
+      <p class="title-description fade-in">Hello! I'm a software developer in my 4th year at Oakland University and previously worked at <a class="homepage-link amazon-link" ga-name="Amazon Internship Page" href="/amazon_internship">Amazon </a> and <a class="homepage-link riis-link" ga-name="Riis Internship Page" href="/riis">Riis</a>. This spring, I'll be returning to Amazon as a full-time software development engineer.</p>
+      <section class="experience fade-in delay-3">
+        <h1 class="section-title">Experience</h1>
+        <div class="work-grid"><a class="card card-amazon" href="">
+                  <div class="card-image" style="background-color:#ff9900;">
+                    <div class="card-icon" style="background-image: url(img/amazon_logo.png);"></div>
+                  </div>
+                  <h2 class="title">Amazon</h2>
+                  <h3 class="subtitle">Software Development Engineer</h3></a>
+        </div>
+        <div class="work-grid"><a class="card card-amazon-internship" href="amazon-internship.html">
+                  <div class="card-image" style="background-color:#ff9900;">
+                    <div class="card-icon" style="background-image: url(img/amazon_logo.png);"></div><img src="img/spheres.jpg">
+                  </div>
+                  <h2 class="title">Amazon</h2>
+                  <h3 class="subtitle">Software Development Engineer Intern</h3></a><a class="card card-riis" href="">
+                  <div class="card-image" style="background-color:#2494D0;">
+                    <div class="card-icon" style="background-image: url(img/riis_logo_white.svg);"></div><img src="img/office.jpg">
+                  </div>
+                  <h2 class="title">Riis</h2>
+                  <h3 class="subtitle">Mobile Development Intern</h3></a>
+        </div>
+        <div class="work-grid"><a class="card card-logicdrop" href="">
+                  <h2 class="title">Logicdrop</h2>
+                  <h3 class="subtitle">Software Development Engineer Intern</h3></a><a class="card card-oakland-university" href="">
+                  <h2 class="title">Oakland University</h2>
+                  <h3 class="subtitle">Teaching Assistant</h3></a>
+        </div>
+      </section>
+      <section class="other-stuff fade-in delay-5">
+        <h1 class="section-title">Here are a few things I've made</h1>
+        <div class="work-grid small"><a class="card card-brand-cnetral" href="">
+                  <h2 class="title">Brand Central</h2>
+                  <h3 class="subtitle">Web Application</h3></a><a class="card card-eta-detroit" href="">
+                  <h2 class="title">ETA Detroit</h2>
+                  <h3 class="subtitle">Mobile Application</h3></a><a class="card card-ramsay-kitchen-assistant" href="">
+                  <h2 class="title">Ramsay Kitchen Assistant</h2>
+                  <h3 class="subtitle">Alexa Skill</h3></a>
+        </div>
+      </section>
+      <div class="work-grid small"><a class="card card-sokoban-solver" href="">
+                <h2 class="title">Sokoban Solver</h2>
+                <h3 class="subtitle">Research Project</h3></a><a class="card card-activity-classification" href="">
+                <h2 class="title">Activity Classification</h2>
+                <h3 class="subtitle">Research Project</h3></a>
+        <!--+card('See More...', '', '', '', '', '')-->
+        <div class="card empty-item"></div>
       </div>
-    </section>
-    <section class="projects">
-      <div class="projects-grid"><a class="project-card project-card--destination-delicious" href="https://github.com/kdjohnson/destinationDelicious">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Destination Delicious</div>
-                <div class="project__date">Jan-Jun. 2017</div>
-                <div class="project__description">An iOS application used to locate nearby food trucks.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--react-native">react native</div>
-                  <div class="tag-custom tag-custom--javascript">javascript</div>
-                  <div class="tag-custom tag-custom--mysql">mysql</div>
-                  <div class="tag-custom tag-custom--ios">ios</div>
-                  <div class="tag-custom tag-custom--android">android</div>
-                </div>
-              </div></a><a class="project-card project-card--eta-detroit-ios-application" href="https://itunes.apple.com/us/app/eta-detroit/id1206979871?mt=8">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">ETA Detroit iOS Application</div>
-                <div class="project__date">Jan-Jun. 2017</div>
-                <div class="project__description">An iOS application designed to provide access to safe, efficient, reliable transit for all Detroit residents.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--hackathon">hackathon</div>
-                  <div class="tag-custom tag-custom--swift">swift</div>
-                </div>
-              </div></a><a class="project-card project-card--sokoban-solver" href="https://drive.google.com/open?id=0B_Mjzckcc-JfcjFxOEFZa3ZXQ3c">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Sokoban Solver</div>
-                <div class="project__date">Jan-Jun. 2017</div>
-                <div class="project__description">Q-Learning based implementation of a sokoban puzzel solver.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--python">python</div>
-                  <div class="tag-custom tag-custom--machine-learning">machine learning</div>
-                </div>
-              </div></a><a class="project-card project-card--ticket-time" href="http://ticket-time.herokuapp.com/#/home/movies">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Ticket Time</div>
-                <div class="project__date">Sept-Dec. 2016</div>
-                <div class="project__description">Web application built to reserve movie tickets. Recieved an award for the most impressive application.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--mysql">mysql</div>
-                  <div class="tag-custom tag-custom--node.js">node.js</div>
-                  <div class="tag-custom tag-custom--javascript">javascript</div>
-                  <div class="tag-custom tag-custom--angular-2.0">angular 2.0</div>
-                  <div class="tag-custom tag-custom--socket.io">socket.io</div>
-                  <div class="tag-custom tag-custom--express">express</div>
-                </div>
-              </div></a><a class="project-card project-card--2d-game-engine" href="https://github.com/jpherkness/Game">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">2D Game Engine</div>
-                <div class="project__date">Jun. 2016</div>
-                <div class="project__description">A 2D Game and Game Engine written in Java.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--java">java</div>
-                </div>
-              </div></a><a class="project-card project-card--studr" href="http://devpost.com/software/studr">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Studr</div>
-                <div class="project__date">Sep. 2015</div>
-                <div class="project__description">An iOS application created in 36 hours during MHacks VI with the purpose of simplifying the act of creating, managing, and joining study groups.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--hackathon">hackathon</div>
-                  <div class="tag-custom tag-custom--ios">ios</div>
-                  <div class="tag-custom tag-custom--swift">swift</div>
-                  <div class="tag-custom tag-custom--objective-c">objective-c</div>
-                  <div class="tag-custom tag-custom--parse">parse</div>
-                  <div class="tag-custom tag-custom--firebase">firebase</div>
-                </div>
-              </div></a><a class="project-card project-card--life" href="https://github.com/jpherkness/Life">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Life</div>
-                <div class="project__date">Jul. 2016</div>
-                <div class="project__description">A C++ implementation of Conway's Game of Life. I used this project to better understand the C++ lanuage.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--c++">c++</div>
-                  <div class="tag-custom tag-custom--sfml">sfml</div>
-                </div>
-              </div></a><a class="project-card project-card--shared-space" href="https://github.com/jpherkness/SharedSpace">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Shared Space</div>
-                <div class="project__date">Sep-Dec. 2016</div>
-                <div class="project__description">Local event aggregation Android application completed as my sophomore design project.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--android">android</div>
-                  <div class="tag-custom tag-custom--java">java</div>
-                  <div class="tag-custom tag-custom--android-studio">android studio</div>
-                  <div class="tag-custom tag-custom--firebase">firebase</div>
-                  <div class="tag-custom tag-custom--geofire">geofire</div>
-                  <div class="tag-custom tag-custom--google-maps-api">google maps api</div>
-                </div>
-              </div></a><a class="project-card project-card--ramsay" href="https://github.com/joshherkness/Ramsay">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Ramsay</div>
-                <div class="project__date">Feb. 2016</div>
-                <div class="project__description">Amazon Alexa voice activated kitchen assistant created in 18 hours during SpartaHack 2016.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--hackathon">hackathon</div>
-                  <div class="tag-custom tag-custom--javascript">javascript</div>
-                  <div class="tag-custom tag-custom--node.js">node.js</div>
-                  <div class="tag-custom tag-custom--aws">aws</div>
-                </div>
-              </div></a><a class="project-card project-card--portfolio" href="https://github.com/jpherkness/jpherkness.github.io">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Portfolio</div>
-                <div class="project__date">Nov. 2014</div>
-                <div class="project__description">My  website, which contains a list of projects that I've worked on.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--javascript">javascript</div>
-                  <div class="tag-custom tag-custom--html">html</div>
-                  <div class="tag-custom tag-custom--css">css</div>
-                  <div class="tag-custom tag-custom--pug">pug</div>
-                  <div class="tag-custom tag-custom--sass">sass</div>
-                  <div class="tag-custom tag-custom--gulp">gulp</div>
-                </div>
-              </div></a><a class="project-card project-card--advanced-python-course" href="https://github.com/jpherkness/Oakland-University-Outreach/tree/master/Python">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Advanced Python Course</div>
-                <div class="project__date">May. 2015</div>
-                <div class="project__description">Developed an advanced python course to teach to high school students.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--python">python</div>
-                </div>
-              </div></a><a class="project-card project-card--java-pong-game" href="https://github.com/jpherkness/Pong-Java">
-              <!--if imageUrl//.project__image(style='background-image: url(' + imageUrl +')')
-              -->
-              <div class="project__body">
-                <div class="project__title">Java Pong Game</div>
-                <div class="project__date">Jun. 2016</div>
-                <div class="project__description">A Java implementation of the game Pong.</div>
-                <div class="project__tags tag-wrapper">
-                  <div class="tag-custom tag-custom--java">java</div>
-                </div>
-              </div></a>
-      </div>
-    </section>
-    <section class="footer">
-      <div class="container has-text-centered"><a href="mailto:jpherkness@gmail.com">jpherkness@gmail.com</a><br><a href="https://github.com/jpherkness">Github</a><br><a href="https://twitter.com/jpherkness">Twitter</a><br><a href="https://www.linkedin.com/in/josephherkness">LinkedIn</a><br><a href="https://drive.google.com/open?id=0B_Mjzckcc-JfQ3ktYVlZUFJJeWM">Résumé</a></div>
-    </section>
+      <section class="social-media-container">
+        <ul>
+          <li><a target="_blank" href="https://github.com/jpherkness">Github</a></li>
+          <li><a target="_blank" href="https://linkedin.com/in/josephherkness">Linkedin</a></li>
+          <li><a target="_blank" href="https://facebook.com/jpherkness">Facebook</a></li>
+          <li><a target="_blank" href="https://twitter.com/jpherkness">Twitter</a></li>
+          <li><a target="_blank" href="https://instagram.com/josephherkness">Instagram</a></li>
+        </ul>
+      </section>
+    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/animation.js"></script>
-    <script src="js/vendor/three.js"></script>
     <script src="js/analytics.js"></script>
   </body>
 </html>
