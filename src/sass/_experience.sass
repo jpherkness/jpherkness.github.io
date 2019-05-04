@@ -4,13 +4,11 @@
   margin-top: 30px
   padding-top: 30px
 
-
 .work-grid 
   display: flex
   flex-flow: row
   margin-left: -20px
   margin-right: -20px
-
 
 .card 
   color: inherit
@@ -21,6 +19,8 @@
   text-decoration: none
   -webkit-backface-visibility: hidden
   -webkit-transform-style: preserve-3d
+  border: 1px solid rgba(143, 172, 192, 0.1)
+  border-radius: 2px
   h2 
     font-size: 16px
     font-weight: 600
@@ -61,11 +61,12 @@
     -o-transform: scale(1)
     transform: scale(1)
   
+  &.empty-item
+    border: none
+
   &.empty-item:after 
     content: none
   
-
-
 .work-grid.small
     .card-image
         height: 120px
@@ -120,8 +121,6 @@
     padding-left: 15px
     padding-right: 15px
   
-
-
 @media (max-width: 600px) 
   .home-title 
     margin-top: 40px
@@ -133,7 +132,6 @@
       margin-top: 30px
       text-align: left
     
-  
   .work-section 
     margin-top: 20px
   
@@ -141,8 +139,6 @@
     margin: 0 0 10px
     width: 100%
   
-
-
 @media (max-width: 450px) 
   .work-grid 
     flex-flow: row wrap
@@ -164,21 +160,3 @@
     background: -webkit-linear-gradient(-45deg, #FA5356 0, #ff9900 100%)
     background: linear-gradient(135deg, #146eb4 0, #146eb4 100%)
     opacity: .7
-
-.card-brand-central .card-image:before
-    // background: -moz-linear-gradient(-45deg, #EC2741 0, #EC2741 100%)
-    // background: -webkit-linear-gradient(-45deg, #EC2741 0, #EC2741 100%)
-    // background: linear-gradient(135deg, #EC2741 0, #EC2741 100%)
-    // opacity: .7
-
-.card-eta-detroit .card-image .card-icon
-    border-radius: 8px
-    // -webkit-box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
-    // -moz-box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
-    // box-shadow: 0px 0px 125px -2px rgba(0,0,0,0.82)
-
-.card-eta-detroit .card-image:before
-    // background: -moz-linear-gradient(-45deg, #39BFA2 0, #39BFA2 100%)
-    // background: -webkit-linear-gradient(-45deg, #39BFA2 0, #39BFA2 100%)
-    // background: linear-gradient(135deg, #ffffff 0, #ffffff 100%)
-    // opacity: 0.7
